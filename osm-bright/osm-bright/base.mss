@@ -76,8 +76,8 @@
   }
 }
 
-#tele_building[zoom>=17] {
-  building-fill:@tele_building;
+#tele_office[zoom>=17] {
+  building-fill:@tele_office;
   building-height:1.25;
 }
 
@@ -98,10 +98,20 @@
   }
 }
 
+#tele_exchange_buildings{
+  building-fill:#F7C23E;
+  building-height:1.25;
+  }
+
+#tele_exchange_points{
+  marker-width:8;
+  marker-fill:#F7C23E;
+}
+
 
 
 #cabinet{
-  marker-width:8;
+  marker-width:7;
   marker-fill:@cabinet;
   marker-line-color:#813;
   marker-allow-overlap:true;
@@ -120,7 +130,7 @@
 
 
 #submarine_cable {
-  line-width: 4;
+  line-width: 3;
   line-cap: round;
   line-dasharray: 5, 20
   line-opacity 0.7;
@@ -131,6 +141,20 @@
     line-color: @submarine_cable_fibre;
   }
 }
+
+#tele_line {
+  line-width: 2;
+  line-cap: round;
+  line-join: round;
+  line-color: #000;
+}
+
+#poles{
+  marker-width:6;
+  marker-fill: #A97D0E;
+  marker-allow-overlap:true;
+}
+
 
 
 /* ================================================================== */

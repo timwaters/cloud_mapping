@@ -1,6 +1,64 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <osm version='0.6' upload='false' generator='JOSM'>
   <bounds minlat='53.7858464' minlon='-1.5617752' maxlat='53.8034894' maxlon='-1.5257263' origin='osmfilter 1.3A' />
+  <node id='-325' action='modify' visible='true' lat='53.78736050892' lon='-1.53382890608'>
+    <tag k='name' v='central o pt' />
+    <tag k='telecom' v='central_office' />
+  </node>
+  <node id='-324' action='modify' visible='true' lat='53.78705102808' lon='-1.53301932582'>
+    <tag k='man_made' v='telephone_exchange' />
+  </node>
+  <node id='-320' action='modify' visible='true' lat='53.78754338288' lon='-1.53242404621' />
+  <node id='-307' action='modify' visible='true' lat='53.78785286009' lon='-1.53323362647'>
+    <tag k='name' v='central o pt' />
+    <tag k='telecom' v='central_office' />
+  </node>
+  <node id='-303' action='modify' visible='true' lat='53.78854214202' lon='-1.53635289162' />
+  <node id='-302' action='modify' visible='true' lat='53.78707916279' lon='-1.53559093373' />
+  <node id='-301' action='modify' visible='true' lat='53.78688221939' lon='-1.53811491927' />
+  <node id='-300' action='modify' visible='true' lat='53.7882326699' lon='-1.53773394032' />
+  <node id='-276' action='modify' visible='true' lat='53.78864060994' lon='-1.53966264625' />
+  <node id='-274' action='modify' visible='true' lat='53.78717763415' lon='-1.53890068835' />
+  <node id='-272' action='modify' visible='true' lat='53.78698069121' lon='-1.54142467389' />
+  <node id='-271' action='modify' visible='true' lat='53.78833113855' lon='-1.54104369494' />
+  <node id='-265' action='modify' visible='true' lat='53.79453953831' lon='-1.52863107917'>
+    <tag k='communication' v='pole' />
+  </node>
+  <node id='-264' action='modify' visible='true' lat='53.79374390261' lon='-1.52725044108'>
+    <tag k='communication' v='pole' />
+  </node>
+  <node id='-253' action='modify' visible='true' lat='53.79909606783' lon='-1.55831326956'>
+    <tag k='communication' v='cable_distribution_cabinet' />
+    <tag k='operator' v='Deutsche Telekom AG' />
+  </node>
+  <node id='-252' action='modify' visible='true' lat='53.79963841945' lon='-1.55847856059'>
+    <tag k='communication' v='cable_distribution_cabinet' />
+    <tag k='operator' v='Deutsche Telekom AG' />
+  </node>
+  <node id='-251' action='modify' visible='true' lat='53.79851032019' lon='-1.55818470987'>
+    <tag k='communication' v='cable_distribution_cabinet' />
+    <tag k='operator' v='Deutsche Telekom AG' />
+  </node>
+  <node id='-242' action='modify' visible='true' lat='53.7914563659' lon='-1.52883312377' />
+  <node id='-240' action='modify' visible='true' lat='53.79259020404' lon='-1.52664430728' />
+  <node id='-238' action='modify' visible='true' lat='53.79557384216' lon='-1.53253727475'>
+    <tag k='communication' v='pole' />
+  </node>
+  <node id='-237' action='modify' visible='true' lat='53.79871637813' lon='-1.52937190937'>
+    <tag k='communication' v='pole' />
+  </node>
+  <node id='-201' action='modify' visible='true' lat='53.79836554985' lon='-1.55511115061'>
+    <tag k='communication' v='outdoor_dslam' />
+    <tag k='operator' v='Deutsche Telekom AG' />
+  </node>
+  <node id='-200' action='modify' visible='true' lat='53.79723741635' lon='-1.55481729989'>
+    <tag k='communication' v='outdoor_dslam' />
+    <tag k='operator' v='Deutsche Telekom AG' />
+  </node>
+  <node id='-199' action='modify' visible='true' lat='53.79782318177' lon='-1.55494585958'>
+    <tag k='communication' v='outdoor_dslam' />
+    <tag k='operator' v='Deutsche Telekom AG' />
+  </node>
   <node id='-193' action='modify' visible='true' lat='53.80110678832' lon='-1.52913840621' />
   <node id='-192' action='modify' visible='true' lat='53.80006495805' lon='-1.53293785074' />
   <node id='-191' action='modify' visible='true' lat='53.80054580601' lon='-1.54487896211' />
@@ -258,6 +316,33 @@
   <node id='2159904745' visible='true' version='1' lat='53.7896321' lon='-1.5337125' />
   <node id='2159904753' visible='true' version='1' lat='53.7900542' lon='-1.5341721' />
   <node id='2159904754' visible='true' version='1' lat='53.7900916' lon='-1.5338827' />
+  <way id='-299' action='modify' visible='true'>
+    <nd ref='-300' />
+    <nd ref='-301' />
+    <nd ref='-302' />
+    <nd ref='-303' />
+    <nd ref='-300' />
+    <tag k='building' v='yes' />
+    <tag k='man_made' v='telephone_exchange' />
+    <tag k='name' v='tele ex' />
+  </way>
+  <way id='-273' action='modify' visible='true'>
+    <nd ref='-271' />
+    <nd ref='-272' />
+    <nd ref='-274' />
+    <nd ref='-276' />
+    <nd ref='-271' />
+    <tag k='building' v='yes' />
+    <tag k='name' v='central o' />
+    <tag k='telecom' v='central_office' />
+  </way>
+  <way id='-239' action='modify' visible='true'>
+    <nd ref='-237' />
+    <nd ref='-238' />
+    <nd ref='-240' />
+    <nd ref='-242' />
+    <tag k='communication' v='line' />
+  </way>
   <way id='-189' action='modify' visible='true'>
     <nd ref='-190' />
     <nd ref='-191' />
