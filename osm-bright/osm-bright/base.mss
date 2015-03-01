@@ -120,10 +120,16 @@
 
 
 #submarine_cable {
-line-color: @submarine_cable;
-line-width: 5;
-line-cap: round;
-line-join: round;
+  line-width: 4;
+  line-cap: round;
+  line-dasharray: 5, 20
+  line-opacity 0.7;
+  [type='telephone']{ 
+    line-color: @submarine_cable_tele;
+  }
+  [type='fibre_optic']{
+    line-color: @submarine_cable_fibre;
+  }
 }
 
 

@@ -37,8 +37,8 @@ Map { font-directory: url(./fonts); }
 @cabinet: #0E6400; 
 @tele_building: #E300B8;
 @data_centre: #8404FF;
-@submarine_cable: #050064;
-
+@submarine_cable_tele: #050064;
+@submarine_cable_fibre: #E300B8;
 
 
 /* ================================================================== */

@@ -1,145 +1,149 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <osm version='0.6' upload='false' generator='JOSM'>
   <bounds minlat='53.7858464' minlon='-1.5617752' maxlat='53.8034894' maxlon='-1.5257263' origin='osmfilter 1.3A' />
-  <node id='-30200' action='modify' visible='true' lat='53.80236751992269' lon='-1.5299562736474273' />
-  <node id='-30198' action='modify' visible='true' lat='53.801325720975555' lon='-1.533755718176524' />
-  <node id='-30196' action='modify' visible='true' lat='53.80180655447519' lon='-1.5456968295536848' />
-  <node id='-30195' action='modify' visible='true' lat='53.80180655447519' lon='-1.5568237742460391' />
-  <node id='-219' action='modify' visible='true' lat='53.7962720203623' lon='-1.560500147285402'>
-    <tag k='operator' v='BT' />
-    <tag k='ref' v='111' />
-    <tag k='telecommunications' v='cabinet' />
+  <node id='-193' action='modify' visible='true' lat='53.80110678832' lon='-1.52913840621' />
+  <node id='-192' action='modify' visible='true' lat='53.80006495805' lon='-1.53293785074' />
+  <node id='-191' action='modify' visible='true' lat='53.80054580601' lon='-1.54487896211' />
+  <node id='-190' action='modify' visible='true' lat='53.80054580601' lon='-1.5560059068' />
+  <node id='-136' action='modify' visible='true' lat='53.78986631641' lon='-1.53380423826' />
+  <node id='-134' visible='true' lat='53.79932592537' lon='-1.55055872895'>
+    <tag k='street_cabinet' v='telecoms' />
   </node>
-  <node id='-218' action='modify' visible='true' lat='53.795334253010225' lon='-1.5604039262352072'>
-    <tag k='operator' v='BT' />
-    <tag k='ref' v='111' />
-    <tag k='telecommunications' v='cabinet' />
+  <node id='-132' visible='true' lat='53.79916321941' lon='-1.55105460204'>
+    <tag k='street_cabinet' v='telecoms' />
   </node>
-  <node id='-217' action='modify' visible='true' lat='53.79402702717055' lon='-1.5603558157101098'>
-    <tag k='operator' v='BT' />
-    <tag k='ref' v='111' />
-    <tag k='telecommunications' v='cabinet' />
+  <node id='-130' visible='true' lat='53.79851238924' lon='-1.55103623637'>
+    <tag k='street_cabinet' v='telecoms' />
   </node>
-  <node id='-216' action='modify' visible='true' lat='53.79186717347486' lon='-1.5595379367834548'>
-    <tag k='operator' v='BT' />
-    <tag k='ref' v='111' />
-    <tag k='telecommunications' v='cabinet' />
+  <node id='-128' visible='true' lat='53.79799171784' lon='-1.55105460204'>
+    <tag k='street_cabinet' v='telecoms' />
   </node>
-  <node id='-196' action='modify' visible='true' lat='53.790687629479194' lon='-1.536014671908341' />
-  <node id='-195' action='modify' visible='true' lat='53.79035226024832' lon='-1.5355448797290865' />
-  <node id='-194' action='modify' visible='true' lat='53.79022592602592' lon='-1.5358272409243414' />
-  <node id='-193' action='modify' visible='true' lat='53.79022231924556' lon='-1.5362210194985222' />
-  <node id='-192' action='modify' visible='true' lat='53.79018711756805' lon='-1.5364749194985228' />
-  <node id='-191' action='modify' visible='true' lat='53.790185117472696' lon='-1.5365572194985222' />
-  <node id='-190' action='modify' visible='true' lat='53.79020901861173' lon='-1.5366269194985227' />
-  <node id='-189' action='modify' visible='true' lat='53.79024202018443' lon='-1.5366619194985223' />
-  <node id='-188' action='modify' visible='true' lat='53.790285822271855' lon='-1.5366691194985225' />
-  <node id='-187' action='modify' visible='true' lat='53.790321723982764' lon='-1.5366376194985232' />
-  <node id='-186' action='modify' visible='true' lat='53.79036762617022' lon='-1.536650919498522' />
-  <node id='-185' action='modify' visible='true' lat='53.79061420992171' lon='-1.5368490207108725' />
-  <node id='-158' action='modify' visible='true' lat='53.79183813490872' lon='-1.5370522599038958' />
-  <node id='-157' action='modify' visible='true' lat='53.79150277487596' lon='-1.5365824677246416' />
-  <node id='-156' action='modify' visible='true' lat='53.79137644411849' lon='-1.5368648289198963' />
-  <node id='-155' action='modify' visible='true' lat='53.791372837437066' lon='-1.5372586074940773' />
-  <node id='-154' action='modify' visible='true' lat='53.79133763672499' lon='-1.5375125074940774' />
-  <node id='-153' action='modify' visible='true' lat='53.791335636684515' lon='-1.5375948074940773' />
-  <node id='-152' action='modify' visible='true' lat='53.79135953716803' lon='-1.537664507494078' />
-  <node id='-151' action='modify' visible='true' lat='53.79139253783559' lon='-1.5376995074940771' />
-  <node id='-150' action='modify' visible='true' lat='53.79143633872165' lon='-1.5377067074940778' />
-  <node id='-149' action='modify' visible='true' lat='53.79147223944791' lon='-1.5376752074940776' />
-  <node id='-148' action='modify' visible='true' lat='53.791518140376425' lon='-1.5376885074940772' />
-  <node id='-147' action='modify' visible='true' lat='53.791764717364934' lon='-1.537886608706427' />
-  <node id='-131' action='modify' visible='true' lat='53.79249873306845' lon='-1.5379361858354796' />
-  <node id='-111' action='modify' visible='true' lat='53.792960411506186' lon='-1.5381236168194785' />
-  <node id='-110' action='modify' visible='true' lat='53.79262506044598' lon='-1.537653824640225' />
-  <node id='-109' visible='true' lat='53.792495126483544' lon='-1.5383299644096606' />
-  <node id='-108' visible='true' lat='53.79245992671325' lon='-1.5385838644096608' />
-  <node id='-107' visible='true' lat='53.792457926726286' lon='-1.5386661644096604' />
-  <node id='-106' visible='true' lat='53.79248182657034' lon='-1.5387358644096607' />
-  <node id='-105' visible='true' lat='53.792514826354974' lon='-1.5387708644096607' />
-  <node id='-104' visible='true' lat='53.79255862606915' lon='-1.5387780644096607' />
-  <node id='-103' visible='true' lat='53.79259452583489' lon='-1.5387465644096607' />
-  <node id='-100' visible='true' lat='53.79264042553534' lon='-1.5387598644096607' />
-  <node id='-99' action='modify' visible='true' lat='53.792886995926686' lon='-1.53895796562201' />
-  <node id='-44' action='modify' visible='true' lat='53.78837876727366' lon='-1.5442950584566846'>
-    <tag k='communications_tower:type' v='dish' />
-    <tag k='man_made' v='communications_tower' />
-    <tag k='name' v='HUGE TOWER' />
+  <node id='-126' visible='true' lat='53.79744934492' lon='-1.55088931101'>
+    <tag k='street_cabinet' v='telecoms' />
   </node>
-  <node id='-42' action='modify' visible='true' lat='53.78713270089188' lon='-1.5455877910413107'>
-    <tag k='man_made' v='mast' />
-    <tag k='mast:type' v='communication' />
-    <tag k='operator' v='ntl' />
+  <node id='-124' action='modify' visible='true' lat='53.79686357428' lon='-1.55076075132'>
+    <tag k='man_made' v='street_cabinet' />
   </node>
-  <node id='-40' action='modify' visible='true' lat='53.787172897159294' lon='-1.5498061815806172'>
-    <tag k='man_made' v='mast' />
-    <tag k='mast:type' v='communication' />
-    <tag k='operator' v='ntl' />
+  <node id='-122' visible='true' lat='53.79190589149' lon='-1.55223000492'>
+    <tag k='street_cabinet' v='telecoms' />
   </node>
-  <node id='-38' action='modify' visible='true' lat='53.78733368184384' lon='-1.5550451504762075'>
-    <tag k='man_made' v='mast' />
-    <tag k='mast:type' v='communication' />
-    <tag k='operator' v='ntl' />
-    <tag k='ref' v='acasc111' />
+  <node id='-120' visible='true' lat='53.79192758941' lon='-1.54374506538'>
+    <tag k='street_cabinet' v='telecoms' />
   </node>
-  <node id='-36' action='modify' visible='true' lat='53.78926304999544' lon='-1.5474248320826216'>
-    <tag k='man_made' v='tower' />
-    <tag k='name' v='test2' />
-    <tag k='operator' v='bt' />
-    <tag k='tower:type' v='communication' />
+  <node id='-118' visible='true' lat='53.79639712145' lon='-1.54506739362'>
+    <tag k='street_cabinet' v='telecoms' />
   </node>
-  <node id='-34' action='modify' visible='true' lat='53.78970518436652' lon='-1.5514391069506717'>
-    <tag k='man_made' v='tower' />
-    <tag k='operator' v='bt' />
-    <tag k='ref' v='aas22212' />
-    <tag k='tower:type' v='communication' />
+  <node id='-116' visible='true' lat='53.79462889266' lon='-1.54479190857'>
+    <tag k='street_cabinet' v='telecoms' />
   </node>
-  <node id='-32' action='modify' visible='true' lat='53.78926304999544' lon='-1.5552492661474642'>
+  <node id='-114' visible='true' lat='53.79376102303' lon='-1.54673866959'>
+    <tag k='street_cabinet' v='telecoms' />
+  </node>
+  <node id='-112' visible='true' lat='53.79468313391' lon='-1.54840994556'>
+    <tag k='street_cabinet' v='telecoms' />
+  </node>
+  <node id='-110' action='modify' visible='true' lat='53.79440801731' lon='-1.5519062656'>
+    <tag k='street_cabinet' v='telecoms' />
+  </node>
+  <node id='-108' action='modify' visible='true' lat='53.78926305' lon='-1.55524926615'>
     <tag k='man_made' v='tower' />
     <tag k='name' v='test' />
     <tag k='operator' v='bt' />
     <tag k='tower:type' v='communication' />
   </node>
-  <node id='-30' action='modify' visible='true' lat='53.79440801731' lon='-1.5519062656'>
-    <tag k='street_cabinet' v='telecoms' />
+  <node id='-106' action='modify' visible='true' lat='53.78970518437' lon='-1.55143910695'>
+    <tag k='man_made' v='tower' />
+    <tag k='operator' v='bt' />
+    <tag k='ref' v='aas22212' />
+    <tag k='tower:type' v='communication' />
   </node>
-  <node id='-28' visible='true' lat='53.79468313391' lon='-1.54840994556'>
-    <tag k='street_cabinet' v='telecoms' />
+  <node id='-104' action='modify' visible='true' lat='53.78926305' lon='-1.54742483208'>
+    <tag k='man_made' v='tower' />
+    <tag k='name' v='test2' />
+    <tag k='operator' v='bt' />
+    <tag k='tower:type' v='communication' />
   </node>
-  <node id='-26' visible='true' lat='53.79376102303' lon='-1.54673866959'>
-    <tag k='street_cabinet' v='telecoms' />
+  <node id='-102' action='modify' visible='true' lat='53.78733368184' lon='-1.55504515048'>
+    <tag k='man_made' v='mast' />
+    <tag k='mast:type' v='communication' />
+    <tag k='operator' v='ntl' />
+    <tag k='ref' v='acasc111' />
   </node>
-  <node id='-24' visible='true' lat='53.79462889266' lon='-1.54479190857'>
-    <tag k='street_cabinet' v='telecoms' />
+  <node id='-100' action='modify' visible='true' lat='53.78717289716' lon='-1.54980618158'>
+    <tag k='man_made' v='mast' />
+    <tag k='mast:type' v='communication' />
+    <tag k='operator' v='ntl' />
   </node>
-  <node id='-22' visible='true' lat='53.79639712145' lon='-1.54506739362'>
-    <tag k='street_cabinet' v='telecoms' />
+  <node id='-98' action='modify' visible='true' lat='53.78713270089' lon='-1.54558779104'>
+    <tag k='man_made' v='mast' />
+    <tag k='mast:type' v='communication' />
+    <tag k='operator' v='ntl' />
   </node>
-  <node id='-20' visible='true' lat='53.79192758941' lon='-1.54374506538'>
-    <tag k='street_cabinet' v='telecoms' />
+  <node id='-96' action='modify' visible='true' lat='53.78837876727' lon='-1.54429505846'>
+    <tag k='communications_tower:type' v='dish' />
+    <tag k='man_made' v='communications_tower' />
+    <tag k='name' v='HUGE TOWER' />
   </node>
-  <node id='-18' visible='true' lat='53.79190589149' lon='-1.55223000492'>
-    <tag k='street_cabinet' v='telecoms' />
+  <node id='-94' action='modify' visible='true' lat='53.79288699593' lon='-1.53895796562' />
+  <node id='-92' visible='true' lat='53.79264042554' lon='-1.53875986441' />
+  <node id='-90' visible='true' lat='53.79259452583' lon='-1.53874656441' />
+  <node id='-88' visible='true' lat='53.79255862607' lon='-1.53877806441' />
+  <node id='-86' visible='true' lat='53.79251482635' lon='-1.53877086441' />
+  <node id='-84' visible='true' lat='53.79248182657' lon='-1.53873586441' />
+  <node id='-82' visible='true' lat='53.79245792673' lon='-1.53866616441' />
+  <node id='-80' visible='true' lat='53.79245992671' lon='-1.53858386441' />
+  <node id='-78' visible='true' lat='53.79249512648' lon='-1.53832996441' />
+  <node id='-76' action='modify' visible='true' lat='53.79262506045' lon='-1.53765382464' />
+  <node id='-74' action='modify' visible='true' lat='53.79296041151' lon='-1.53812361682' />
+  <node id='-72' action='modify' visible='true' lat='53.79249873307' lon='-1.53793618584' />
+  <node id='-70' action='modify' visible='true' lat='53.79176471736' lon='-1.53788660871' />
+  <node id='-68' action='modify' visible='true' lat='53.79151814038' lon='-1.53768850749' />
+  <node id='-66' action='modify' visible='true' lat='53.79147223945' lon='-1.53767520749' />
+  <node id='-64' action='modify' visible='true' lat='53.79143633872' lon='-1.53770670749' />
+  <node id='-62' action='modify' visible='true' lat='53.79139253784' lon='-1.53769950749' />
+  <node id='-60' action='modify' visible='true' lat='53.79135953717' lon='-1.53766450749' />
+  <node id='-58' action='modify' visible='true' lat='53.79133563668' lon='-1.53759480749' />
+  <node id='-56' action='modify' visible='true' lat='53.79133763672' lon='-1.53751250749' />
+  <node id='-54' action='modify' visible='true' lat='53.79137283744' lon='-1.53725860749' />
+  <node id='-52' action='modify' visible='true' lat='53.79137644412' lon='-1.53686482892' />
+  <node id='-50' action='modify' visible='true' lat='53.79150277488' lon='-1.53658246772' />
+  <node id='-48' action='modify' visible='true' lat='53.79183813491' lon='-1.5370522599' />
+  <node id='-46' action='modify' visible='true' lat='53.79061420992' lon='-1.53684902071' />
+  <node id='-44' action='modify' visible='true' lat='53.79036762617' lon='-1.5366509195' />
+  <node id='-42' action='modify' visible='true' lat='53.79032172398' lon='-1.5366376195' />
+  <node id='-40' action='modify' visible='true' lat='53.79028582227' lon='-1.5366691195' />
+  <node id='-38' action='modify' visible='true' lat='53.79024202018' lon='-1.5366619195' />
+  <node id='-36' action='modify' visible='true' lat='53.79020901861' lon='-1.5366269195' />
+  <node id='-34' action='modify' visible='true' lat='53.79018511747' lon='-1.5365572195' />
+  <node id='-32' action='modify' visible='true' lat='53.79018711757' lon='-1.5364749195' />
+  <node id='-30' action='modify' visible='true' lat='53.79022231925' lon='-1.5362210195' />
+  <node id='-28' action='modify' visible='true' lat='53.79022592603' lon='-1.53582724092' />
+  <node id='-26' action='modify' visible='true' lat='53.79035226025' lon='-1.53554487973' />
+  <node id='-24' action='modify' visible='true' lat='53.79068762948' lon='-1.53601467191' />
+  <node id='-22' action='modify' visible='true' lat='53.79186717347' lon='-1.55953793678'>
+    <tag k='operator' v='BT' />
+    <tag k='ref' v='111' />
+    <tag k='telecommunications' v='cabinet' />
   </node>
-  <node id='-16' action='modify' visible='true' lat='53.79686357428' lon='-1.55076075132'>
-    <tag k='man_made' v='street_cabinet' />
+  <node id='-20' action='modify' visible='true' lat='53.79402702717' lon='-1.56035581571'>
+    <tag k='operator' v='BT' />
+    <tag k='ref' v='111' />
+    <tag k='telecommunications' v='cabinet' />
   </node>
-  <node id='-14' visible='true' lat='53.79744934492' lon='-1.55088931101'>
-    <tag k='street_cabinet' v='telecoms' />
+  <node id='-18' action='modify' visible='true' lat='53.79533425301' lon='-1.56040392624'>
+    <tag k='operator' v='BT' />
+    <tag k='ref' v='111' />
+    <tag k='telecommunications' v='cabinet' />
   </node>
-  <node id='-12' visible='true' lat='53.79799171784' lon='-1.55105460204'>
-    <tag k='street_cabinet' v='telecoms' />
+  <node id='-16' action='modify' visible='true' lat='53.79627202036' lon='-1.56050014729'>
+    <tag k='operator' v='BT' />
+    <tag k='ref' v='111' />
+    <tag k='telecommunications' v='cabinet' />
   </node>
-  <node id='-10' visible='true' lat='53.79851238924' lon='-1.55103623637'>
-    <tag k='street_cabinet' v='telecoms' />
-  </node>
-  <node id='-8' visible='true' lat='53.79916321941' lon='-1.55105460204'>
-    <tag k='street_cabinet' v='telecoms' />
-  </node>
-  <node id='-6' visible='true' lat='53.79932592537' lon='-1.55055872895'>
-    <tag k='street_cabinet' v='telecoms' />
-  </node>
-  <node id='-4' action='modify' visible='true' lat='53.789866316405615' lon='-1.5338042382567934' />
+  <node id='-14' action='modify' visible='true' lat='53.80180655448' lon='-1.55682377425' />
+  <node id='-12' action='modify' visible='true' lat='53.80180655448' lon='-1.54569682955' />
+  <node id='-10' action='modify' visible='true' lat='53.80132572098' lon='-1.53375571818' />
+  <node id='-8' action='modify' visible='true' lat='53.80236751992' lon='-1.52995627365' />
   <node id='921220260' visible='true' version='2' lat='53.7924299' lon='-1.5412472' />
   <node id='921220261' visible='true' version='2' lat='53.7923208' lon='-1.5412144' />
   <node id='921220262' visible='true' version='2' lat='53.7921862' lon='-1.5410517' />
@@ -254,68 +258,80 @@
   <node id='2159904745' visible='true' version='1' lat='53.7896321' lon='-1.5337125' />
   <node id='2159904753' visible='true' version='1' lat='53.7900542' lon='-1.5341721' />
   <node id='2159904754' visible='true' version='1' lat='53.7900916' lon='-1.5338827' />
-  <way id='-30197' action='modify' visible='true'>
-    <nd ref='-30195' />
-    <nd ref='-30196' />
-    <nd ref='-30198' />
-    <nd ref='-30200' />
+  <way id='-189' action='modify' visible='true'>
+    <nd ref='-190' />
+    <nd ref='-191' />
+    <nd ref='-192' />
+    <nd ref='-193' />
+    <tag k='communication' v='line' />
+    <tag k='name' v='DANICE Seg.1' />
+    <tag k='operator' v='Iceland Telecoms' />
+    <tag k='seamark:cable_submarine:category' v='telephone' />
+    <tag k='seamark:type' v='cable_submarine' />
+    <tag k='submarine' v='yes' />
+  </way>
+  <way id='-178' action='modify' visible='true'>
+    <nd ref='-94' />
+    <nd ref='-92' />
+    <nd ref='-90' />
+    <nd ref='-88' />
+    <nd ref='-86' />
+    <nd ref='-84' />
+    <nd ref='-82' />
+    <nd ref='-80' />
+    <nd ref='-78' />
+    <nd ref='-72' />
+    <nd ref='-76' />
+    <nd ref='-74' />
+    <nd ref='-94' />
+    <tag k='building' v='data_centre' />
+    <tag k='name' v='facebook' />
+  </way>
+  <way id='-176' action='modify' visible='true'>
+    <nd ref='-70' />
+    <nd ref='-68' />
+    <nd ref='-66' />
+    <nd ref='-64' />
+    <nd ref='-62' />
+    <nd ref='-60' />
+    <nd ref='-58' />
+    <nd ref='-56' />
+    <nd ref='-54' />
+    <nd ref='-52' />
+    <nd ref='-50' />
+    <nd ref='-48' />
+    <nd ref='-70' />
+    <tag k='building' v='yes' />
+    <tag k='name' v='Data Center' />
+  </way>
+  <way id='-174' action='modify' visible='true'>
+    <nd ref='-46' />
+    <nd ref='-44' />
+    <nd ref='-42' />
+    <nd ref='-40' />
+    <nd ref='-38' />
+    <nd ref='-36' />
+    <nd ref='-34' />
+    <nd ref='-32' />
+    <nd ref='-30' />
+    <nd ref='-28' />
+    <nd ref='-26' />
+    <nd ref='-24' />
+    <nd ref='-46' />
+    <tag k='building' v='yes' />
+    <tag k='name' v='Data Centre' />
+  </way>
+  <way id='-172' action='modify' visible='true'>
+    <nd ref='-14' />
+    <nd ref='-12' />
+    <nd ref='-10' />
+    <nd ref='-8' />
     <tag k='communication' v='line' />
     <tag k='name' v='DANICE Seg.1' />
     <tag k='operator' v='Iceland Telecoms' />
     <tag k='seamark:cable_submarine:category' v='fibre_optic' />
     <tag k='seamark:type' v='cable_submarine' />
     <tag k='submarine' v='yes' />
-  </way>
-  <way id='-184' action='modify' visible='true'>
-    <nd ref='-185' />
-    <nd ref='-186' />
-    <nd ref='-187' />
-    <nd ref='-188' />
-    <nd ref='-189' />
-    <nd ref='-190' />
-    <nd ref='-191' />
-    <nd ref='-192' />
-    <nd ref='-193' />
-    <nd ref='-194' />
-    <nd ref='-195' />
-    <nd ref='-196' />
-    <nd ref='-185' />
-    <tag k='building' v='yes' />
-    <tag k='name' v='Data Centre' />
-  </way>
-  <way id='-146' action='modify' visible='true'>
-    <nd ref='-147' />
-    <nd ref='-148' />
-    <nd ref='-149' />
-    <nd ref='-150' />
-    <nd ref='-151' />
-    <nd ref='-152' />
-    <nd ref='-153' />
-    <nd ref='-154' />
-    <nd ref='-155' />
-    <nd ref='-156' />
-    <nd ref='-157' />
-    <nd ref='-158' />
-    <nd ref='-147' />
-    <tag k='building' v='yes' />
-    <tag k='name' v='Data Center' />
-  </way>
-  <way id='-98' action='modify' visible='true'>
-    <nd ref='-99' />
-    <nd ref='-100' />
-    <nd ref='-103' />
-    <nd ref='-104' />
-    <nd ref='-105' />
-    <nd ref='-106' />
-    <nd ref='-107' />
-    <nd ref='-108' />
-    <nd ref='-109' />
-    <nd ref='-131' />
-    <nd ref='-110' />
-    <nd ref='-111' />
-    <nd ref='-99' />
-    <tag k='building' v='data_centre' />
-    <tag k='name' v='facebook' />
   </way>
   <way id='78500925' visible='true' version='4'>
     <nd ref='921220260' />
@@ -342,7 +358,7 @@
     <nd ref='2159904742' />
     <nd ref='2159904753' />
     <nd ref='2159904754' />
-    <nd ref='-4' />
+    <nd ref='-136' />
     <nd ref='2159904745' />
     <nd ref='2159904742' />
     <tag k='building' v='yes' />
