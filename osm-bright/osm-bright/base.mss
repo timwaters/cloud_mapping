@@ -64,14 +64,14 @@
 
 
 
-#tele_building[zoom>=12][zoom<=16] {
-  polygon-fill:@tele_building;
+#tele_office[zoom>=12][zoom<=16] {
+  polygon-fill:@tele_office;
   [zoom>=14] {
-    line-color:darken(@tele_building,5%);
+    line-color:darken(@tele_office,5%);
     line-width:0.5;
   }
   [zoom>=16] {
-    line-color:darken(@tele_building,10%);
+    line-color:darken(@tele_office,10%);
     line-width:0.6;
   }
 }
