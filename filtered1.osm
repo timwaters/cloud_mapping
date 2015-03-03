@@ -1,0 +1,464 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version="0.6" generator="osmfilter 1.3A">
+	<bounds minlat="53.7858464" minlon="-1.5617752" maxlat="53.8034894" maxlon="-1.5257263"/>
+	<node id="-25386" lat="53.7914363" lon="-1.5377067"/>
+	<node id="-25385" lat="53.7996384" lon="-1.5584785">
+		<tag k="communication" v="cable_distribution_cabinet"/>
+		<tag k="operator" v="Deutsche Telekom AG"/>
+	</node>
+	<node id="-25384" lat="53.7991632" lon="-1.5510546">
+		<tag k="street_cabinet" v="telecoms"/>
+	</node>
+	<node id="-25383" lat="53.8018065" lon="-1.5456968"/>
+	<node id="-25382" lat="53.7883787" lon="-1.544295">
+		<tag k="communications_tower:type" v="dish"/>
+		<tag k="man_made" v="communications_tower"/>
+		<tag k="name" v="HUGE TOWER"/>
+	</node>
+	<node id="-25381" lat="53.7869806" lon="-1.5414246"/>
+	<node id="-25380" lat="53.7898663" lon="-1.5338042"/>
+	<node id="-25379" lat="53.7913728" lon="-1.5372586"/>
+	<node id="-25378" lat="53.7897051" lon="-1.5514391">
+		<tag k="man_made" v="tower"/>
+		<tag k="operator" v="bt"/>
+		<tag k="ref" v="aas22212"/>
+		<tag k="tower:type" v="communication"/>
+	</node>
+	<node id="-25377" lat="53.7953342" lon="-1.5604039">
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="111"/>
+		<tag k="telecommunications" v="cabinet"/>
+	</node>
+	<node id="-25376" lat="53.7925148" lon="-1.5387708"/>
+	<node id="-25375" lat="53.7902223" lon="-1.536221"/>
+	<node id="-25374" lat="53.7882326" lon="-1.5377339"/>
+	<node id="-25373" lat="53.787051" lon="-1.5330193">
+		<tag k="man_made" v="telephone_exchange"/>
+	</node>
+	<node id="-25372" lat="53.7946831" lon="-1.5484099">
+		<tag k="street_cabinet" v="telecoms"/>
+	</node>
+	<node id="-25371" lat="53.7913376" lon="-1.5375125"/>
+	<node id="-25370" lat="53.7955738" lon="-1.5325372">
+		<tag k="communication" v="pole"/>
+	</node>
+	<node id="-25369" lat="53.7968635" lon="-1.5507607">
+		<tag k="man_made" v="street_cabinet"/>
+	</node>
+	<node id="-25368" lat="53.790209" lon="-1.5366269"/>
+	<node id="-25367" lat="53.7925586" lon="-1.538778"/>
+	<node id="-25366" lat="53.7985103" lon="-1.5581847">
+		<tag k="communication" v="cable_distribution_cabinet"/>
+		<tag k="operator" v="Deutsche Telekom AG"/>
+	</node>
+	<node id="-25365" lat="53.7906142" lon="-1.536849"/>
+	<node id="-25364" lat="53.7985123" lon="-1.5510362">
+		<tag k="street_cabinet" v="telecoms"/>
+	</node>
+	<node id="-25363" lat="53.8013257" lon="-1.5337557"/>
+	<node id="-25362" lat="53.7924951" lon="-1.5383299"/>
+	<node id="-25361" lat="53.7883311" lon="-1.5410436"/>
+	<node id="-25360" lat="53.7913764" lon="-1.5368648"/>
+	<node id="-25359" lat="53.7983655" lon="-1.5551111">
+		<tag k="communication" v="outdoor_dslam"/>
+		<tag k="operator" v="Deutsche Telekom AG"/>
+	</node>
+	<node id="-25358" lat="53.789263" lon="-1.5474248">
+		<tag k="man_made" v="tower"/>
+		<tag k="name" v="test2"/>
+		<tag k="operator" v="bt"/>
+		<tag k="tower:type" v="communication"/>
+	</node>
+	<node id="-25357" lat="53.796272" lon="-1.5605001">
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="111"/>
+		<tag k="telecommunications" v="cabinet"/>
+	</node>
+	<node id="-25356" lat="53.7924818" lon="-1.5387358"/>
+	<node id="-25355" lat="53.7902259" lon="-1.5358272"/>
+	<node id="-25354" lat="53.7886406" lon="-1.5396626"/>
+	<node id="-25352" lat="53.7917647" lon="-1.5378866"/>
+	<node id="-25351" lat="53.7987163" lon="-1.5293719">
+		<tag k="communication" v="pole"/>
+	</node>
+	<node id="-25350" lat="53.7919058" lon="-1.55223">
+		<tag k="street_cabinet" v="telecoms"/>
+	</node>
+	<node id="-25349" lat="53.7901851" lon="-1.5365572"/>
+	<node id="-25348" lat="53.7873336" lon="-1.5550451">
+		<tag k="man_made" v="mast"/>
+		<tag k="mast:type" v="communication"/>
+		<tag k="operator" v="ntl"/>
+		<tag k="ref" v="acasc111"/>
+	</node>
+	<node id="-25347" lat="53.7903676" lon="-1.5366509"/>
+	<node id="-25346" lat="53.8000649" lon="-1.5329378"/>
+	<node id="-25345" lat="53.7979917" lon="-1.5510546">
+		<tag k="street_cabinet" v="telecoms"/>
+	</node>
+	<node id="-25344" lat="53.8023675" lon="-1.5299562"/>
+	<node id="-25343" lat="53.792625" lon="-1.5376538"/>
+	<node id="-25342" lat="53.7945395" lon="-1.528631">
+		<tag k="communication" v="pole"/>
+	</node>
+	<node id="-25341" lat="53.7915027" lon="-1.5365824"/>
+	<node id="-25340" lat="53.7972374" lon="-1.5548172">
+		<tag k="communication" v="outdoor_dslam"/>
+		<tag k="operator" v="Deutsche Telekom AG"/>
+	</node>
+	<node id="-25339" lat="53.7963971" lon="-1.5450673">
+		<tag k="street_cabinet" v="telecoms"/>
+	</node>
+	<node id="-25338" lat="53.7913925" lon="-1.5376995"/>
+	<node id="-25337" lat="53.7924579" lon="-1.5386661"/>
+	<node id="-25336" lat="53.7903522" lon="-1.5355448"/>
+	<node id="-25335" lat="53.7928869" lon="-1.5389579"/>
+	<node id="-25334" lat="53.7878528" lon="-1.5332336">
+		<tag k="name" v="central o pt"/>
+		<tag k="telecom" v="central_office"/>
+	</node>
+	<node id="-25333" lat="53.7915181" lon="-1.5376885"/>
+	<node id="-25332" lat="53.7937439" lon="-1.5272504">
+		<tag k="communication" v="pole"/>
+	</node>
+	<node id="-25331" lat="53.7919275" lon="-1.543745">
+		<tag k="street_cabinet" v="telecoms"/>
+	</node>
+	<node id="-25330" lat="53.7901871" lon="-1.5364749"/>
+	<node id="-25329" lat="53.7871728" lon="-1.5498061">
+		<tag k="man_made" v="mast"/>
+		<tag k="mast:type" v="communication"/>
+		<tag k="operator" v="ntl"/>
+	</node>
+	<node id="-25328" lat="53.7873605" lon="-1.5338289">
+		<tag k="name" v="central o pt"/>
+		<tag k="telecom" v="central_office"/>
+	</node>
+	<node id="-25327" lat="53.7903217" lon="-1.5366376"/>
+	<node id="-25326" lat="53.8005458" lon="-1.5448789"/>
+	<node id="-25325" lat="53.794408" lon="-1.5519062">
+		<tag k="street_cabinet" v="telecoms"/>
+	</node>
+	<node id="-25324" lat="53.7918671" lon="-1.5595379">
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="111"/>
+		<tag k="telecommunications" v="cabinet"/>
+	</node>
+	<node id="-25323" lat="53.7929604" lon="-1.5381236"/>
+	<node id="-25322" lat="53.7870791" lon="-1.5355909"/>
+	<node id="-25321" lat="53.7918381" lon="-1.5370522"/>
+	<node id="-25320" lat="53.7978231" lon="-1.5549458">
+		<tag k="communication" v="outdoor_dslam"/>
+		<tag k="operator" v="Deutsche Telekom AG"/>
+	</node>
+	<node id="-25319" lat="53.7946288" lon="-1.5447919">
+		<tag k="street_cabinet" v="telecoms"/>
+	</node>
+	<node id="-25318" lat="53.7913595" lon="-1.5376645"/>
+	<node id="-25317" lat="53.7914563" lon="-1.5288331"/>
+	<node id="-25316" lat="53.7924599" lon="-1.5385838"/>
+	<node id="-25315" lat="53.7906876" lon="-1.5360146"/>
+	<node id="-25314" lat="53.7926404" lon="-1.5387598"/>
+	<node id="-25313" lat="53.7885421" lon="-1.5363528"/>
+	<node id="-25312" lat="53.7914722" lon="-1.5376752"/>
+	<node id="-25311" lat="53.799096" lon="-1.5583132">
+		<tag k="communication" v="cable_distribution_cabinet"/>
+		<tag k="operator" v="Deutsche Telekom AG"/>
+	</node>
+	<node id="-25310" lat="53.7993259" lon="-1.5505587">
+		<tag k="street_cabinet" v="telecoms"/>
+	</node>
+	<node id="-25309" lat="53.8018065" lon="-1.5568237"/>
+	<node id="-25308" lat="53.7871327" lon="-1.5455877">
+		<tag k="man_made" v="mast"/>
+		<tag k="mast:type" v="communication"/>
+		<tag k="operator" v="ntl"/>
+	</node>
+	<node id="-25307" lat="53.7871776" lon="-1.5389006"/>
+	<node id="-25306" lat="53.7902858" lon="-1.5366691"/>
+	<node id="-25305" lat="53.8005458" lon="-1.5560059"/>
+	<node id="-25304" lat="53.789263" lon="-1.5552492">
+		<tag k="man_made" v="tower"/>
+		<tag k="name" v="test"/>
+		<tag k="operator" v="bt"/>
+		<tag k="tower:type" v="communication"/>
+	</node>
+	<node id="-25303" lat="53.794027" lon="-1.5603558">
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="111"/>
+		<tag k="telecommunications" v="cabinet"/>
+	</node>
+	<node id="-25302" lat="53.7924987" lon="-1.5379361"/>
+	<node id="-25301" lat="53.7868822" lon="-1.5381149"/>
+	<node id="-25300" lat="53.8011067" lon="-1.5291384"/>
+	<node id="-25299" lat="53.793761" lon="-1.5467386">
+		<tag k="street_cabinet" v="telecoms"/>
+	</node>
+	<node id="-25298" lat="53.7913356" lon="-1.5375948"/>
+	<node id="-25297" lat="53.7925902" lon="-1.5266443"/>
+	<node id="-25296" lat="53.7974493" lon="-1.5508893">
+		<tag k="street_cabinet" v="telecoms"/>
+	</node>
+	<node id="-25295" lat="53.790242" lon="-1.5366619"/>
+	<node id="-25294" lat="53.7925945" lon="-1.5387465"/>
+	<node id="319470330" lat="53.7924859" lon="-1.552919" version="4">
+		<tag k="man_made" v="tower"/>
+		<tag k="name" v="Giotto Tower"/>
+	</node>
+	<node id="319470331" lat="53.792666" lon="-1.5523873" version="3">
+		<tag k="man_made" v="tower"/>
+		<tag k="name" v="Verona Tower"/>
+	</node>
+	<node id="319470332" lat="53.7925647" lon="-1.5517516" version="3">
+		<tag k="man_made" v="tower"/>
+		<tag k="name" v="Lime Tower"/>
+	</node>
+	<node id="921220260" lat="53.7924299" lon="-1.5412472" version="2"/>
+	<node id="921220261" lat="53.7923208" lon="-1.5412144" version="2"/>
+	<node id="921220262" lat="53.7921862" lon="-1.5410517" version="2"/>
+	<node id="921220263" lat="53.7922214" lon="-1.5407978" version="2"/>
+	<node id="921220264" lat="53.792281" lon="-1.5403683" version="1"/>
+	<node id="921220265" lat="53.7925209" lon="-1.5405872" version="3"/>
+	<node id="1001493219" lat="53.7975266" lon="-1.5401199" version="1">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1001493236" lat="53.7967211" lon="-1.5399005" version="1">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="18"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1001493250" lat="53.7928233" lon="-1.5359429" version="1">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="124"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1011784633" lat="53.796542" lon="-1.5375106" version="2">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="J14"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1086002295" lat="53.7958887" lon="-1.5424533" version="1">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="30"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1086002311" lat="53.7977486" lon="-1.5422505" version="1">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1086002317" lat="53.7961241" lon="-1.5424571" version="2">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1151052143" lat="53.7990118" lon="-1.541768" version="1">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="13"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1151052191" lat="53.7929523" lon="-1.5600902" version="1">
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="111"/>
+		<tag k="telecommunications" v="cabinet"/>
+	</node>
+	<node id="1210469274" lat="53.7958673" lon="-1.5471308" version="1">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="24"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1210469294" lat="53.7987805" lon="-1.5391091" version="1">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="15"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1210469299" lat="53.7958702" lon="-1.551979" version="1">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="54"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1210469306" lat="53.7980672" lon="-1.5358241" version="1">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="J9"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1210469312" lat="53.7951102" lon="-1.5548042" version="1">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1210469314" lat="53.798903" lon="-1.5393317" version="1">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="135"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1210469317" lat="53.7962243" lon="-1.5490584" version="1">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="53"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="1210469343" lat="53.795678" lon="-1.5451082" version="2">
+		<tag k="cabinet" v="pstn"/>
+		<tag k="operator" v="BT"/>
+		<tag k="ref" v="27"/>
+		<tag k="utility" v="cabinet"/>
+	</node>
+	<node id="2137628472" lat="53.7923667" lon="-1.5412277" version="1"/>
+	<node id="2137628473" lat="53.7923721" lon="-1.5411636" version="1"/>
+	<node id="2137628475" lat="53.7923464" lon="-1.5411504" version="1"/>
+	<node id="2137628477" lat="53.7922849" lon="-1.5412459" version="1"/>
+	<node id="2137628480" lat="53.7922411" lon="-1.5412387" version="1"/>
+	<node id="2137628482" lat="53.7922081" lon="-1.5412037" version="1"/>
+	<node id="2137628484" lat="53.7921842" lon="-1.541134" version="1"/>
+	<node id="2159904742" lat="53.7895222" lon="-1.5339751" version="1"/>
+	<node id="2159904745" lat="53.7896321" lon="-1.5337125" version="1"/>
+	<node id="2159904753" lat="53.7900542" lon="-1.5341721" version="1"/>
+	<node id="2159904754" lat="53.7900916" lon="-1.5338827" version="1"/>
+	<way id="-25394">
+		<nd ref="-25305"/>
+		<nd ref="-25326"/>
+		<nd ref="-25346"/>
+		<nd ref="-25300"/>
+		<tag k="communication" v="line"/>
+		<tag k="name" v="DANICE Seg.1"/>
+		<tag k="operator" v="Iceland Telecoms"/>
+		<tag k="seamark:cable_submarine:category" v="telephone"/>
+		<tag k="seamark:type" v="cable_submarine"/>
+		<tag k="submarine" v="yes"/>
+	</way>
+	<way id="-25393">
+		<nd ref="-25351"/>
+		<nd ref="-25370"/>
+		<nd ref="-25297"/>
+		<nd ref="-25317"/>
+		<tag k="communication" v="line"/>
+	</way>
+	<way id="-25392">
+		<nd ref="-25365"/>
+		<nd ref="-25347"/>
+		<nd ref="-25327"/>
+		<nd ref="-25306"/>
+		<nd ref="-25295"/>
+		<nd ref="-25368"/>
+		<nd ref="-25349"/>
+		<nd ref="-25330"/>
+		<nd ref="-25375"/>
+		<nd ref="-25355"/>
+		<nd ref="-25336"/>
+		<nd ref="-25315"/>
+		<nd ref="-25365"/>
+		<tag k="building" v="yes"/>
+		<tag k="name" v="Data Centre"/>
+	</way>
+	<way id="-25391">
+		<nd ref="-25361"/>
+		<nd ref="-25381"/>
+		<nd ref="-25307"/>
+		<nd ref="-25354"/>
+		<nd ref="-25361"/>
+		<tag k="building" v="yes"/>
+		<tag k="name" v="central o"/>
+		<tag k="telecom" v="central_office"/>
+	</way>
+	<way id="-25390">
+		<nd ref="-25309"/>
+		<nd ref="-25383"/>
+		<nd ref="-25363"/>
+		<nd ref="-25344"/>
+		<tag k="communication" v="line"/>
+		<tag k="name" v="DANICE Seg.1"/>
+		<tag k="operator" v="Iceland Telecoms"/>
+		<tag k="seamark:cable_submarine:category" v="fibre_optic"/>
+		<tag k="seamark:type" v="cable_submarine"/>
+		<tag k="submarine" v="yes"/>
+	</way>
+	<way id="-25389">
+		<nd ref="-25352"/>
+		<nd ref="-25333"/>
+		<nd ref="-25312"/>
+		<nd ref="-25386"/>
+		<nd ref="-25338"/>
+		<nd ref="-25318"/>
+		<nd ref="-25298"/>
+		<nd ref="-25371"/>
+		<nd ref="-25379"/>
+		<nd ref="-25360"/>
+		<nd ref="-25341"/>
+		<nd ref="-25321"/>
+		<nd ref="-25352"/>
+		<tag k="building" v="yes"/>
+		<tag k="name" v="Data Center"/>
+	</way>
+	<way id="-25388">
+		<nd ref="-25374"/>
+		<nd ref="-25301"/>
+		<nd ref="-25322"/>
+		<nd ref="-25313"/>
+		<nd ref="-25374"/>
+		<tag k="building" v="yes"/>
+		<tag k="man_made" v="telephone_exchange"/>
+		<tag k="name" v="tele ex"/>
+	</way>
+	<way id="-25387">
+		<nd ref="-25335"/>
+		<nd ref="-25314"/>
+		<nd ref="-25294"/>
+		<nd ref="-25367"/>
+		<nd ref="-25376"/>
+		<nd ref="-25356"/>
+		<nd ref="-25337"/>
+		<nd ref="-25316"/>
+		<nd ref="-25362"/>
+		<nd ref="-25302"/>
+		<nd ref="-25343"/>
+		<nd ref="-25323"/>
+		<nd ref="-25335"/>
+		<tag k="building" v="data_centre"/>
+		<tag k="name" v="facebook"/>
+	</way>
+	<way id="78500925" version="4">
+		<nd ref="921220260"/>
+		<nd ref="2137628472"/>
+		<nd ref="2137628473"/>
+		<nd ref="2137628475"/>
+		<nd ref="921220261"/>
+		<nd ref="2137628477"/>
+		<nd ref="2137628480"/>
+		<nd ref="2137628482"/>
+		<nd ref="2137628484"/>
+		<nd ref="921220262"/>
+		<nd ref="921220263"/>
+		<nd ref="921220264"/>
+		<nd ref="921220265"/>
+		<nd ref="921220260"/>
+		<tag k="building" v="yes"/>
+		<tag k="name" v="AQL"/>
+		<tag k="office" v="telecommunication"/>
+		<tag k="old_name" v="Salem Chapel"/>
+		<tag k="source" v="OS_OpenData_StreetView"/>
+	</way>
+	<way id="205990066" version="1">
+		<nd ref="2159904742"/>
+		<nd ref="2159904753"/>
+		<nd ref="2159904754"/>
+		<nd ref="-25380"/>
+		<nd ref="2159904745"/>
+		<nd ref="2159904742"/>
+		<tag k="building" v="yes"/>
+		<tag k="name" v="Everything Everywhere"/>
+		<tag k="office" v="telecommunication"/>
+	</way>
+</osm>

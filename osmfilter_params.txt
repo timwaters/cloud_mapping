@@ -1,0 +1,10 @@
+-v
+
+--keep=cabinet= utility= street_cabinet= mast= mast:type= communications_tower= communications_tower:type= telecommunications= communication= seamark:cable_submarine:category= submarine= telecom= office=*tele*
+man_made=mast =tower =communications_tower =street_cabinet =telephone_exchange =telephone_office
+building=data_center =data_centre =telephone_exchange
+name=*data* name=*Data*
+
+--drop-author
+
+--out-osm
