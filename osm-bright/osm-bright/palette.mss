@@ -5,7 +5,7 @@
 /* For basic style customization you can simply edit the colors and
  * fonts defined in this file. For more detailed / advanced
  * adjustments explore the other files.
- *
+ * 
  * GENERAL NOTES
  *
  * There is a slight performance cost in rendering line-caps.  An
