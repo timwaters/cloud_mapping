@@ -160,7 +160,7 @@
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
         "key_field": "",
-        "table": "( SELECT way, communication AS type  FROM planet_osm_point  WHERE (communication='pole') ) AS data",
+        "table": "( SELECT way, communication AS type  FROM planet_osm_point  WHERE communication='pole' OR utility='pole' ) AS data",
         "type": "postgis"
       },
       "class": "",
