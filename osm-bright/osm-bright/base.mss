@@ -63,9 +63,12 @@
 
 
 
-
-#tele_office[zoom>=12][zoom<=16] {
-  polygon-fill:@tele_office;
+#tele_office[zoom<=12]{
+	marker-width:8;
+  	marker-fill:@tele_office;
+}
+#tele_office[zoom>=13][zoom<=19] {
+  building-fill:@tele_office;
   [zoom>=14] {
     line-color:darken(@tele_office,5%);
     line-width:0.5;
@@ -73,21 +76,18 @@
   [zoom>=16] {
     line-color:darken(@tele_office,10%);
     line-width:0.6;
+    building-height:1.25;
   }
 }
 
-#tele_office[zoom>=17] {
-  building-fill:@tele_office;
-  building-height:1.25;
-}
 
-#data_centre[zoom>=17] {
-  building-fill:@data_centre;
-  building-height:1.25;
-}
 
-#data_centre[zoom>=12][zoom<=16] {
-  polygon-fill:@data_centre;
+#data_center[zoom<=12]{
+	marker-width:8;
+  	marker-fill:@data_centre;
+}
+#data_centre[zoom>=13][zoom<=19] {
+ building-fill:@data_centre;
   [zoom>=14] {
     line-color:darken(@data_centre,5%);
     line-width:0.5;
@@ -95,10 +95,16 @@
   [zoom>=16] {
     line-color:darken(@data_centre,10%);
     line-width:0.6;
+    building-height:1.25;
   }
 }
 
-#tele_exchange_buildings{
+#tele_exchange_buildings[zoom<=12]{
+	marker-width:8;
+  	marker-fill:#F7C23E;
+}
+
+#tele_exchange_buildings[zoom>=13][zoom<=19]{
   building-fill:#F7C23E;
   building-height:1.25;
   }
@@ -111,10 +117,17 @@
 
 
 #cabinet{
-  marker-width:7;
-  marker-fill:@cabinet;
-  marker-line-color:#813;
-  marker-allow-overlap:true;
+  [zoom<=15] {
+    marker-width:5;
+    marker-fill:@cabinet;
+    marker-allow-overlap:true;
+  [zoom<=12]{
+    marker-width:2;
+    }
+  }
+  [zoom>=16] {
+    point-file: url('symbols/cabinet.20.png');
+  }
 }
 
 #mast{
@@ -149,10 +162,13 @@
   line-color: #000;
 }
 
-#poles{
+#poles[zoom>=12]{
   marker-width:6;
   marker-fill: #A97D0E;
   marker-allow-overlap:true;
+  [zoom<14]{
+  	marker-width:3
+  }
 }
 
 
