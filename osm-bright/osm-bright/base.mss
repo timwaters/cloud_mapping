@@ -14,10 +14,11 @@
 
 
 #cabinet[zoom>=12]{
+    marker-fill:@cabinet;
+    marker-line-color:@cabinet;
+    marker-allow-overlap:true;
   [zoom<=15] {
     marker-width:4;
-    marker-fill:@cabinet;
-    marker-allow-overlap:true;
   [zoom<=13]{
     marker-width:2;
     }
@@ -71,10 +72,11 @@
 }
 
 #poles[zoom>=12]{
-  marker-width:6;
+  marker-width:5;
   marker-fill: #A97D0E;
+  marker-line-color: #A97D0E;
   [zoom<14]{
-  	marker-width:3
+  	marker-width:2;
   }
 }
 
