@@ -36,9 +36,11 @@ Map { font-directory: url(./fonts); }
 /* telecoms custom colours */
 @cabinet: #4d7047; 
 @tele_office: #E300B8;
-@data_centre: #8404FF;
-@submarine_cable_tele: #050064;
-@submarine_cable_fibre: #E300B8;
+@data_centre: #5704a4;
+
+@submarine_cable: #04009C;
+@submarine_cable_tele: #1B16DF;
+@submarine_cable_fibre: #6100B1;
 
 
 /* ================================================================== */
