@@ -43,6 +43,7 @@ way        seamark:cable_submarine:category   text   linear
 node,way   submarine       text      linear
 node,way   telecom       text        linear
 node,way   telephone     text        linear
+node,way   phone     text        linear
 
 node,way   access       text         linear
 node,way   addr:housename      text  linear

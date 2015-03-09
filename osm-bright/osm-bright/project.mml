@@ -78,7 +78,7 @@
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
         "key_field": "",
-        "table": "( SELECT way, communication AS type  FROM planet_osm_line  WHERE ((communication='line' OR telephone='line') AND (submarine IS NULL OR submarine IN ( '', 'no', '0', 'false')))) AS data",
+        "table": "( SELECT way, communication AS type  FROM planet_osm_line  WHERE ((communication='line' OR telephone='line' OR phone='line') AND (submarine IS NULL OR submarine IN ( '', 'no', '0', 'false')))) AS data",
         "type": "postgis"
       },
       "class": "",
@@ -110,7 +110,7 @@
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
         "key_field": "",
-        "table": "( SELECT way, communication AS type  FROM planet_osm_point  WHERE telephone='pole' OR communication='pole' OR utility='pole' ) AS data",
+        "table": "( SELECT way, communication AS type  FROM planet_osm_point  WHERE phone='pole' OR telephone='pole' OR communication='pole' OR utility='pole' ) AS data",
         "type": "postgis"
       },
       "class": "",
