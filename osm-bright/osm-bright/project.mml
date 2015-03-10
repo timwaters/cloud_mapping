@@ -126,7 +126,7 @@
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
         "key_field": "",
-        "table": "( SELECT way, cabinet AS type, name FROM planet_osm_point WHERE cabinet IS NOT NULL OR street_cabinet IS NOT NULL OR \"utility\"='cabinet' OR \"man_made\"='street_cabinet' or \"telecommunications\"='cabinet' OR (\"communication\"='outdoor_dslam' OR \"communication\"='cable_distribution_cabinet' or communication='remote_terminal')) AS data",
+        "table": "( SELECT way, cabinet AS type, name FROM planet_osm_point WHERE cabinet IS NOT NULL OR street_cabinet IS NOT NULL OR \"utility\"='cabinet' OR \"man_made\"='street_cabinet' or \"telecommunications\"='cabinet' OR (\"communication\"='outdoor_dslam' OR \"communication\"='cable_distribution_cabinet' or telecom='remote_terminal')) AS data",
         "type": "postgis"
       },
       "class": "",
