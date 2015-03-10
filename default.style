@@ -35,15 +35,16 @@ node,way   cabinet      text         linear
 node,way   utility      text         linear
 node,way   street_cabinet   text     linear
 node,way   mast:type    text         linear
-node,way   communications_tower:type   text     linear
-node,way   telecommunications   text  linear
+node,way   communications_tower:type  text     linear
+node,way   telecommunications   text linear
 node,way   communication       text  linear
 
 way        seamark:cable_submarine:category   text   linear
-node,way   submarine       text      linear
+node,way   submarine     text        linear
 node,way   telecom       text        linear
 node,way   telephone     text        linear
-node,way   phone     text        linear
+node,way   phone         text        linear
+node,way   aerial_line   text        linear
 
 node,way   access       text         linear
 node,way   addr:housename      text  linear
