@@ -35,6 +35,7 @@ node,way   cabinet      text         linear
 node,way   utility      text         linear
 node,way   street_cabinet   text     linear
 node,way   mast:type    text         linear
+node,way   tower:type    text         linear
 node,way   communications_tower:type  text     linear
 node,way   telecommunications   text linear
 node,way   communication       text  linear
@@ -67,7 +68,6 @@ node       poi          text
 node,way   power        text         polygon
 node,way   power_source text         linear
 node,way   ref          text         linear
-node,way   tower:type   text         linear
 node,way   tunnel       text         linear
 node,way   width        text         linear
 node,way   z_order      int4         linear # This is calculated during import
