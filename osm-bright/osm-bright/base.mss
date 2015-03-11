@@ -13,19 +13,20 @@
 /* ================================================================== */
 
 
+
+#cabinet[zoom>=16] {
+    point-file: url('symbols/cabinet.20.png');
+  }
 #cabinet[zoom>=12]{
     marker-fill:@cabinet;
     marker-line-color:@cabinet;
     marker-allow-overlap:true;
   [zoom<=15] {
     marker-width:4;
+    }
   [zoom<=13]{
     marker-width:2;
     }
-  }
-  [zoom>=16] {
-    point-file: url('symbols/cabinet.20.png');
-  }
 }
 
 #mast[zoom>=6]{
