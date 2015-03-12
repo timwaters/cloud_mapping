@@ -136,7 +136,7 @@
 }
 
 
-#tele_exchange_buildings[zoom<=13]{
+#tele_exchange_buildings[zoom<=11]{
     point-allow-overlap: true;
     point-file: url('symbols/commercial-24.png');
     [zoom<=7] {  
@@ -145,7 +145,12 @@
     point-file: url('symbols/commercial-18.png'); }
 }
 
-#tele_exchange_buildings[zoom>=14][zoom<=19]{
+#tele_exchange_buildings[zoom>=15][zoom<=19]{
+  building-fill:#F7C23E;
+  building-height:1.25;
+  }
+
+#tele_exchange_buildings_scaled[zoom>=12][zoom<=14]{
   building-fill:#F7C23E;
   building-height:1.25;
   }
