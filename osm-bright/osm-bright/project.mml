@@ -208,7 +208,7 @@
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
         "key_field": "",
-        "table": "( select st_translate(st_scale(way, 10,10), st_x(st_centroid(way))*(1-10), st_y(st_centroid(way))*(1-10))  as way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office') OR building='telephone_exchange'))  AS data",
+        "table": "( select st_translate(st_scale(way, 35 - z(!scale_denominator!) , 35 - z(!scale_denominator!)), st_x(st_centroid(way))*(1-( 35 - z(!scale_denominator!))), st_y(st_centroid(way))*(1-( 35 - z(!scale_denominator!))))  as way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office') OR building='telephone_exchange'))  AS data",
         "type": "postgis"
       },
       "class": "",
