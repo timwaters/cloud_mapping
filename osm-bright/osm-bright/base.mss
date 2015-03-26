@@ -113,7 +113,7 @@
     point-allow-overlap: false;
     point-file: url('symbols/warehouse-18.png'); }
 }
-#data_centre[zoom>=14][zoom<=19] {
+#data_centre[zoom>=16][zoom<=19] {
  building-fill:@data_centre;
   [zoom>=14] {
     line-color:darken(@data_centre,5%);
@@ -126,6 +126,11 @@
   }
 }
 
+#data_centre_scaled[zoom>=12][zoom<=15]{
+  building-fill:@data_centre;
+}
+
+
 #tele_exchange_points{
     point-allow-overlap: true;
     point-file: url('symbols/commercial-24.png');
@@ -136,7 +141,7 @@
 }
 
 
-#tele_exchange_buildings[zoom<=10]{
+#tele_exchange_buildings[zoom<=11]{
     point-allow-overlap: true;
     point-file: url('symbols/commercial-24.png');
     [zoom<=7] {  
@@ -145,12 +150,14 @@
     point-file: url('symbols/commercial-18.png'); }
 }
 
-#tele_exchange_buildings[zoom>=15][zoom<=19]{
-  building-fill:#F7C23E;
-  building-height:1.25;
-  }
+#tele_exchange_buildings[zoom>=16][zoom<=19]{
+  building-fill:@tele_office;
+  building-height:2.25;
+    line-color:darken(@tele_office,10%);
+    line-width:0.6;
+ 
+}
 
-#tele_exchange_buildings_scaled[zoom>=11][zoom<=14]{
-  building-fill:#F7C23E;
-  building-height:1.25;
-  }
+#tele_exchange_buildings_scaled[zoom>=12][zoom<=15]{
+  building-fill:@tele_office;
+}
