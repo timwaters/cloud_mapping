@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" font-directory="./fonts">
+
+<Parameters>
+  <Parameter name="bounds">-3.5547,52.7709,0.3345,54.3306</Parameter>
+  <Parameter name="center">-1.6211,53.5612,7</Parameter>
+  <Parameter name="format">png8</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="maxzoom">17</Parameter>
+  <Parameter name="scale">1</Parameter>
+  <Parameter name="metatile">2</Parameter>
+  <Parameter name="attribution"><![CDATA[Data © OpenStreetMap (and) contributors, CC-BY-SA]]></Parameter>
+  <Parameter name="name"><![CDATA[OSM Bright]]></Parameter>
+</Parameters>
+
+<FontSet name="fontset-0">
+  <Font face-name="Open Sans Semibold"/>
+  <Font face-name="DejaVu Sans Book"/>
+  <Font face-name="unifont Medium"/>
+</FontSet>
+<Style name="mast" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <PointSymbolizer file="symbols/mast.p.18.png" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <PointSymbolizer file="symbols/mast.p.20.png" />
+  </Rule>
+</Style>
+<Layer name="mast"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>mast</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, man_made AS type, name FROM planet_osm_point WHERE  ("man_made"='mast' AND ("mast:type"='communication' OR "tower:type"='communication')) OR telecom='antenna') AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tower" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <PointSymbolizer file="symbols/communications.p.18.png" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <PointSymbolizer file="symbols/communications.p.20.png" />
+  </Rule>
+</Style>
+<Layer name="tower"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tower</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, man_made AS type, name FROM planet_osm_point WHERE  "man_made"='tower' AND "tower:type"='communication') AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="big_tower" filter-mode="first">
+  <Rule>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <PointSymbolizer file="symbols/comms_tower.p.20.png" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <PointSymbolizer file="symbols/comms_tower.p.25.png" />
+  </Rule>
+</Style>
+<Layer name="big_tower"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>big_tower</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, man_made AS type, name FROM planet_osm_point WHERE  "man_made"='communications_tower') AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tele_line" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" />
+  </Rule>
+</Style>
+<Layer name="tele_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_line</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, communication AS type  FROM planet_osm_line  WHERE ((communication='line' OR telephone='line' OR phone='line' OR aerial_line='telephone') AND (submarine IS NULL OR submarine IN ( '', 'no', '0', 'false')))) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="submarine_cable" filter-mode="first">
+  <Rule>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([type] = 'fibre_optic')</Filter>
+    <LineSymbolizer stroke="#6100b1" stroke-width="1" stroke-linecap="round" stroke-dasharray="5, 20" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([type] = 'fibre_optic')</Filter>
+    <LineSymbolizer stroke="#6100b1" stroke-width="2" stroke-linecap="round" stroke-dasharray="5, 20" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <Filter>([type] = 'telephone')</Filter>
+    <LineSymbolizer stroke="#1b16df" stroke-width="1" stroke-linecap="round" stroke-dasharray="5, 20" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <Filter>([type] = 'telephone')</Filter>
+    <LineSymbolizer stroke="#1b16df" stroke-width="2" stroke-linecap="round" stroke-dasharray="5, 20" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="1" stroke-linecap="round" stroke-dasharray="5, 20" stroke="#04009c" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="2" stroke-linecap="round" stroke-dasharray="5, 20" stroke="#04009c" />
+  </Rule>
+</Style>
+<Layer name="submarine_cable"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>submarine_cable</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, "seamark:cable_submarine:category" AS type  FROM planet_osm_line  WHERE "seamark:cable_submarine:category" IN ('telephone','fibre_optic') OR ("communication"='line' AND "submarine"='yes') ) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="poles" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MarkersSymbolizer width="2" fill="#a97d0e" stroke="#a97d0e" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MarkersSymbolizer width="5" fill="#a97d0e" stroke="#a97d0e" />
+  </Rule>
+</Style>
+<Layer name="poles"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>poles</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, communication AS type  FROM planet_osm_point  WHERE phone='pole' OR telephone='pole' OR communication='pole' OR utility='pole' ) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="cabinet" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MarkersSymbolizer width="2" fill="#4d7047" stroke="#4d7047" allow-overlap="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <MarkersSymbolizer width="4" fill="#4d7047" stroke="#4d7047" allow-overlap="true" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <PointSymbolizer file="symbols/cabinet.20.png" />
+    <MarkersSymbolizer fill="#4d7047" stroke="#4d7047" allow-overlap="true" />
+  </Rule>
+</Style>
+<Layer name="cabinet"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>cabinet</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, cabinet AS type, name FROM planet_osm_point WHERE cabinet IS NOT NULL OR street_cabinet IS NOT NULL OR "utility"='cabinet' OR "man_made"='street_cabinet' or "telecommunications"='cabinet' OR ("communication"='outdoor_dslam' OR "communication"='cable_distribution_cabinet' or telecom='remote_terminal')) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tele_exchange_points" filter-mode="first">
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <PointSymbolizer allow-overlap="false" file="symbols/commercial-18.png" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <PointSymbolizer allow-overlap="true" file="symbols/commercial-24.png" />
+  </Rule>
+</Style>
+<Layer name="tele_exchange_points"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_exchange_points</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, building AS type  FROM planet_osm_point  WHERE man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office' OR building='telephone_exchange') AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="data_centre" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <BuildingSymbolizer height="1.25" fill="#4d0049" />
+    <LineSymbolizer stroke="#1a0019" stroke-width="0.6" />
+  </Rule>
+</Style>
+<Layer name="data_centre"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>data_centre</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, building AS type  FROM planet_osm_polygon  WHERE building NOT IN ('0','false', 'no') AND (building='data_center' OR building='data_centre' OR name LIKE '%Data Centre%' OR name LIKE '%Data Center%') ORDER BY ST_YMin(ST_Envelope(way)) DESC) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tele_office" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <BuildingSymbolizer height="1.25" fill="#064407" />
+    <LineSymbolizer stroke="#021502" stroke-width="0.6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <BuildingSymbolizer fill="#064407" />
+    <LineSymbolizer stroke="#042d05" stroke-width="0.5" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <PointSymbolizer allow-overlap="false" file="symbols/warehouse-18.png" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <PointSymbolizer allow-overlap="true" file="symbols/warehouse-24.png" />
+  </Rule>
+</Style>
+<Layer name="tele_office"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_office</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, building AS type  FROM planet_osm_polygon  WHERE building NOT IN ('0','false', 'no') AND office LIKE 'tele%' ORDER BY ST_YMin(ST_Envelope(way)) DESC) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tele_exchange_buildings" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <BuildingSymbolizer fill="#064407" height="2.25" />
+    <LineSymbolizer stroke="#021502" stroke-width="0.6" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <PointSymbolizer allow-overlap="false" file="symbols/commercial-18.png" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <PointSymbolizer allow-overlap="true" file="symbols/commercial-24.png" />
+  </Rule>
+</Style>
+<Layer name="tele_exchange_buildings"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_exchange_buildings</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office') OR building='telephone_exchange') ORDER BY ST_YMin(ST_Envelope(way)) DESC) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tele_exchange_buildings_scaled" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <BuildingSymbolizer fill="#064407" />
+  </Rule>
+</Style>
+<Layer name="tele_exchange_buildings_scaled"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_exchange_buildings_scaled</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( select st_translate(st_scale(way,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!))  ,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) ), st_x(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )), st_y(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )))  as way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office') OR building='telephone_exchange'))  AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="data_centre_scaled" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <BuildingSymbolizer fill="#4d0049" />
+  </Rule>
+</Style>
+<Layer name="data_centre_scaled"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>data_centre_scaled</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( select st_translate(st_scale(way,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!))  ,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) ), st_x(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )), st_y(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )))  as way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (building='data_center' OR building='data_centre' OR name LIKE '%Data Centre%' OR name LIKE '%Data Center%')  ))  AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="building-text" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([way_area] &gt;= 150000)</Filter>
+    <TextSymbolizer size="11" fill="#444444" fontset-name="fontset-0" halo-radius="1" wrap-width="20" halo-fill="rgba(255, 255, 255, 0.5)" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([way_area] &gt;= 150000)</Filter>
+    <TextSymbolizer size="11" fill="#444444" fontset-name="fontset-0" halo-radius="1" wrap-width="20" halo-fill="rgba(255, 255, 255, 0.5)" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([way_area] &gt;= 80000)</Filter>
+    <TextSymbolizer size="11" fill="#444444" fontset-name="fontset-0" halo-radius="1" wrap-width="20" halo-fill="rgba(255, 255, 255, 0.5)" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([way_area] &gt;= 20000)</Filter>
+    <TextSymbolizer size="11" fill="#444444" fontset-name="fontset-0" halo-radius="1" wrap-width="20" halo-fill="rgba(255, 255, 255, 0.5)" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <TextSymbolizer size="11" fill="#444444" fontset-name="fontset-0" halo-radius="1" wrap-width="20" halo-fill="rgba(255, 255, 255, 0.5)" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="building-text"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>building-text</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select name, way, way_area from planet_osm_polygon where building is not null  and building not in ('no','station','supermarket')) as building_text]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508,-19929239,20037508,19929239]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
