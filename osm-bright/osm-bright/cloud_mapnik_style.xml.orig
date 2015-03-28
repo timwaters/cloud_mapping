@@ -35,8 +35,6 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>mast</StyleName>
     <Datasource>
-<Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
        <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
@@ -62,9 +60,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>tower</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -88,9 +84,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>big_tower</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -109,9 +103,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>tele_line</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -154,9 +146,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>submarine_cable</StyleName>
     <Datasource>
-    <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-    <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -180,9 +170,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>poles</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -213,9 +201,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>cabinet</StyleName>
     <Datasource>
-    <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-    <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -238,9 +224,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>tele_exchange_points</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -261,9 +245,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>data_centre</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -299,9 +281,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>tele_office</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -331,9 +311,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>tele_exchange_buildings</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -353,9 +331,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>tele_exchange_buildings_scaled</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -375,9 +351,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>data_centre_scaled</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -417,9 +391,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>building-text</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
        <Parameter name="table"><![CDATA[(select name, way, way_area from planet_osm_polygon where building is not null  and building not in ('no','station','supermarket')) as building_text]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508,-19929239,20037508,19929239]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
