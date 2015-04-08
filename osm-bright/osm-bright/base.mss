@@ -123,7 +123,7 @@
     point-allow-overlap: false;
     point-file: url('symbols/warehouse-18.png'); }
 }
-#tele_office[zoom>=14][zoom<=19] {
+#tele_office[zoom>=16][zoom<=19] {
   building-fill:@tele_office;
   [zoom>=14] {
     line-color:darken(@tele_office,5%);
@@ -136,7 +136,9 @@
   }
 }
 
-
+#tele_office_scaled[zoom>=12][zoom<=15]{
+  building-fill:@tele_office;
+}
 
 #data_center[zoom<=13]{
     point-allow-overlap: true;
