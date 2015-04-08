@@ -314,12 +314,6 @@
     <LineSymbolizer stroke="#021502" stroke-width="0.6" />
   </Rule>
   <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <BuildingSymbolizer fill="#064407" />
-    <LineSymbolizer stroke="#042d05" stroke-width="0.5" />
-  </Rule>
-  <Rule>
     <MinScaleDenominator>3000000</MinScaleDenominator>
     <PointSymbolizer allow-overlap="false" file="symbols/warehouse-18.png" />
   </Rule>
@@ -417,6 +411,28 @@
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="table"><![CDATA[( select st_translate(st_scale(way,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!))  ,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) ), st_x(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )), st_y(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )))  as way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (building='data_center' OR building='data_centre' OR name LIKE '%Data Centre%' OR name LIKE '%Data Center%')  ))  AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tele_office_scaled" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <BuildingSymbolizer fill="#064407" />
+  </Rule>
+</Style>
+<Layer name="tele_office_scaled"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_office_scaled</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( select st_translate(st_scale(way,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!))  ,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) ), st_x(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )), st_y(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )))  as way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (office LIKE 'tele%' )  ))  AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
