@@ -99,16 +99,13 @@
 
 
 #building-text {
-  [way_area >= 150000][zoom >= 14],
-  [way_area >= 80000][zoom >= 15],
-  [way_area >= 20000][zoom >= 16],
-  [zoom >= 17] {
+  [zoom >= 12] {
     text-name: "[name]";
-    text-size: 11;
+    text-size: 14;
     text-fill: #444;
     text-face-name: @sans;
-    text-halo-radius: 1;
-    text-wrap-width: 20;
+    text-halo-radius: 1.2;
+    text-wrap-width: 60;
     text-halo-fill: rgba(255,255,255,0.5);
     text-placement: interior;
   }
