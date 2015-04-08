@@ -34,6 +34,15 @@
   [zoom<=8]{
   	point-file: url('symbols/mast.p.18.png');
   }
+  [zoom>=13]{
+  text-name: "[name]";
+  text-size: 12;
+  text-fill: #444;
+  text-face-name: @sans;
+  text-wrap-width: 60;
+  text-allow-overlap: true;
+  text-dy: 10;
+  }
 }
 
 #tower[zoom>=5]{
@@ -41,11 +50,29 @@
   [zoom<=8]{
   	point-file: url('symbols/communications.p.18.png');
   }
+  [zoom>=13]{
+  text-name: "[name]";
+  text-size: 12;
+  text-fill: #444;
+  text-face-name: @sans;
+  text-wrap-width: 60;
+  text-allow-overlap: true;
+  text-dy: 10;
+  }
 }
 #big_tower{
   point-file: url('symbols/comms_tower.p.25.png');
   [zoom<=6]{
   	point-file: url('symbols/comms_tower.p.20.png');
+  }
+  [zoom>=13]{
+  text-name: "[name]";
+  text-size: 12;
+  text-fill: #444;
+  text-face-name: @sans;
+  text-wrap-width: 60;
+  text-allow-overlap: true;
+  text-dy: 10;
   }
 }
 

@@ -29,7 +29,7 @@
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
         "key_field": "",
-        "table": "( SELECT way, man_made AS type, name FROM planet_osm_point WHERE  (\"man_made\"='mast' AND (\"mast:type\"='communication' OR \"tower:type\"='communication')) OR telecom='antenna') AS data",
+        "table": "( SELECT way, name AS type, name FROM planet_osm_point WHERE  (\"man_made\"='mast' AND (\"mast:type\"='communication' OR \"tower:type\"='communication')) OR telecom='antenna') AS data",
         "type": "postgis"
       },
       "class": "",
@@ -48,7 +48,7 @@
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
         "key_field": "",
-        "table": "( SELECT way, man_made AS type, name FROM planet_osm_point WHERE  \"man_made\"='tower' AND \"tower:type\"='communication') AS data",
+        "table": "( SELECT way, name AS type, name FROM planet_osm_point WHERE  \"man_made\"='tower' AND \"tower:type\"='communication') AS data",
         "type": "postgis"
       },
       "class": "",
@@ -67,7 +67,7 @@
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
         "key_field": "",
-        "table": "( SELECT way, man_made AS type, name FROM planet_osm_point WHERE  \"man_made\"='communications_tower') AS data",
+        "table": "( SELECT way, name AS type, name FROM planet_osm_point WHERE  \"man_made\"='communications_tower') AS data",
         "type": "postgis"
       },
       "class": "",
