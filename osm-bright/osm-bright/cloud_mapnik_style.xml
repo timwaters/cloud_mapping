@@ -21,12 +21,18 @@
 </FontSet>
 <Style name="mast" filter-mode="first">
   <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <PointSymbolizer file="symbols/mast.p.20.png" />
+    <TextSymbolizer size="12" fill="#444444" fontset-name="fontset-0" wrap-width="60" allow-overlap="true" dy="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
     <MaxScaleDenominator>12500000</MaxScaleDenominator>
     <MinScaleDenominator>1500000</MinScaleDenominator>
     <PointSymbolizer file="symbols/mast.p.18.png" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
     <PointSymbolizer file="symbols/mast.p.20.png" />
   </Rule>
 </Style>
@@ -35,18 +41,50 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>mast</StyleName>
     <Datasource>
-<Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
        <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT way, man_made AS type, name FROM planet_osm_point WHERE  ("man_made"='mast' AND ("mast:type"='communication' OR "tower:type"='communication')) OR telecom='antenna') AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, name AS type, name FROM planet_osm_point WHERE  ("man_made"='mast' AND ("mast:type"='communication' OR "tower:type"='communication')) OR telecom='antenna') AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="manhole" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <MarkersSymbolizer width="2" fill="#8a867d" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MarkersSymbolizer fill="#8a867d" width="7" />
+  </Rule>
+</Style>
+<Layer name="manhole"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>manhole</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, name AS type, name FROM planet_osm_point WHERE  manhole is not null) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
 
 <Style name="tower" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <PointSymbolizer file="symbols/communications.p.20.png" />
+    <TextSymbolizer size="12" fill="#444444" fontset-name="fontset-0" wrap-width="60" allow-overlap="true" dy="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
   <Rule>
     <MaxScaleDenominator>25000000</MaxScaleDenominator>
     <MinScaleDenominator>1500000</MinScaleDenominator>
@@ -54,6 +92,7 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
     <PointSymbolizer file="symbols/communications.p.20.png" />
   </Rule>
 </Style>
@@ -62,24 +101,30 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>tower</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT way, man_made AS type, name FROM planet_osm_point WHERE  "man_made"='tower' AND "tower:type"='communication') AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, name AS type, name FROM planet_osm_point WHERE  "man_made"='tower' AND "tower:type"='communication') AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
 
 <Style name="big_tower" filter-mode="first">
   <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <PointSymbolizer file="symbols/comms_tower.p.25.png" />
+    <TextSymbolizer size="12" fill="#444444" fontset-name="fontset-0" wrap-width="60" allow-overlap="true" dy="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
     <MinScaleDenominator>6500000</MinScaleDenominator>
     <PointSymbolizer file="symbols/comms_tower.p.20.png" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
     <PointSymbolizer file="symbols/comms_tower.p.25.png" />
   </Rule>
 </Style>
@@ -88,13 +133,13 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>big_tower</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT way, man_made AS type, name FROM planet_osm_point WHERE  "man_made"='communications_tower') AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, name AS type, name FROM planet_osm_point WHERE  "man_made"='communications_tower') AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
@@ -109,9 +154,9 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>tele_line</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -154,9 +199,9 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>submarine_cable</StyleName>
     <Datasource>
-    <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-    <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -180,9 +225,9 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>poles</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -200,12 +245,11 @@
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <MarkersSymbolizer width="4" fill="#4d7047" stroke="#4d7047" allow-overlap="true" />
+    <MarkersSymbolizer width="5" fill="#4d7047" stroke="#4d7047" allow-overlap="true" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <PointSymbolizer file="symbols/cabinet.20.png" />
-    <MarkersSymbolizer fill="#4d7047" stroke="#4d7047" allow-overlap="true" />
   </Rule>
 </Style>
 <Layer name="cabinet"
@@ -213,9 +257,9 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>cabinet</StyleName>
     <Datasource>
-    <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-    <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -224,23 +268,13 @@
     </Datasource>
   </Layer>
 
-<Style name="tele_exchange_points" filter-mode="first">
-  <Rule>
-    <MinScaleDenominator>3000000</MinScaleDenominator>
-    <PointSymbolizer allow-overlap="false" file="symbols/commercial-18.png" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>3000000</MaxScaleDenominator>
-    <PointSymbolizer allow-overlap="true" file="symbols/commercial-24.png" />
-  </Rule>
-</Style>
-<Layer name="tele_exchange_points"
+<Layer name="tele_exchannge_points"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>tele_exchange_points</StyleName>
+    
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -261,9 +295,9 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>data_centre</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -299,9 +333,9 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>tele_office</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -331,9 +365,9 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>tele_exchange_buildings</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -353,9 +387,10 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>tele_exchange_buildings_scaled</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -375,9 +410,9 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>data_centre_scaled</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
@@ -388,43 +423,22 @@
 
 <Style name="building-text" filter-mode="first">
   <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <Filter>([way_area] &gt;= 150000)</Filter>
-    <TextSymbolizer size="11" fill="#444444" fontset-name="fontset-0" halo-radius="1" wrap-width="20" halo-fill="rgba(255, 255, 255, 0.5)" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([way_area] &gt;= 150000)</Filter>
-    <TextSymbolizer size="11" fill="#444444" fontset-name="fontset-0" halo-radius="1" wrap-width="20" halo-fill="rgba(255, 255, 255, 0.5)" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <Filter>([way_area] &gt;= 80000)</Filter>
-    <TextSymbolizer size="11" fill="#444444" fontset-name="fontset-0" halo-radius="1" wrap-width="20" halo-fill="rgba(255, 255, 255, 0.5)" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([way_area] &gt;= 20000)</Filter>
-    <TextSymbolizer size="11" fill="#444444" fontset-name="fontset-0" halo-radius="1" wrap-width="20" halo-fill="rgba(255, 255, 255, 0.5)" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <TextSymbolizer size="11" fill="#444444" fontset-name="fontset-0" halo-radius="1" wrap-width="20" halo-fill="rgba(255, 255, 255, 0.5)" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <TextSymbolizer size="14" fill="#444444" fontset-name="fontset-0" halo-radius="1.2" wrap-width="60" halo-fill="rgba(255, 255, 255, 0.5)" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="building-text"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>building-text</StyleName>
     <Datasource>
-     <Parameter name="host">localhost</Parameter>
-<Parameter name="user">gisuser</Parameter>      
-   <Parameter name="type"><![CDATA[postgis]]></Parameter>
-       <Parameter name="table"><![CDATA[(select name, way, way_area from planet_osm_polygon where building is not null  and building not in ('no','station','supermarket')) as building_text]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select name, way, way_area from planet_osm_polygon where building is not null AND (building IN ('telephone_exchange','data_center','data_centre') OR office LIKE 'tele%' OR man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office')) as building_text]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508,-19929239,20037508,19929239]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
     </Datasource>
   </Layer>
 
