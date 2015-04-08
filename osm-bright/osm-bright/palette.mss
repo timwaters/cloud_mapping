@@ -34,7 +34,8 @@ Map { font-directory: url(./fonts); }
 @text_adjust: 0;
 
 /* telecoms custom colours */
-@cabinet: #4d7047; 
+@cabinet: #4d7047;
+@manhole: #8A867D;
 @tele_office: #064407;
 @data_centre: #4D0049;
 

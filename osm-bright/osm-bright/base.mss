@@ -12,7 +12,13 @@
 /* TELECOMS
 /* ================================================================== */
 
-
+#manhole[zoom>=13]{
+ marker-fill:@manhole;
+ marker-width:7;
+    [zoom<=15]{
+        marker-width:2
+    }
+}
 
 #cabinet[zoom>=16] {
     point-file: url('symbols/cabinet.20.png');

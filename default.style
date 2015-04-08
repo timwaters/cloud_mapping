@@ -47,6 +47,8 @@ node,way   telephone     text        linear
 node,way   phone         text        linear
 node,way   aerial_line   text        linear
 
+node,way   manhole       text        linear
+
 node,way   access       text         linear
 node,way   addr:housename      text  linear
 node,way   addr:housenumber    text  linear
