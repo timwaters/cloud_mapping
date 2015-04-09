@@ -1,8 +1,9 @@
 /* BASE.MSS CONTENTS
- * - Landuse & landcover
- * - Water areas
- * - Water ways
- * - Administrative Boundaries
+ * Cloud Mapping Telecom features 
+ * - Street Furniture
+ * - Telecom Towers 
+ * - Cables 
+ * - Buildings
  *
  */
 
@@ -13,74 +14,78 @@
 /* ================================================================== */
 
 #manhole[zoom>=13]{
- marker-fill:@manhole;
- marker-width:7;
-    [zoom<=15]{
-        marker-width:2
-    }
+  marker-fill:@manhole;
+  marker-width:7;
+  [zoom<=15]{
+    marker-width:2
+  }
 }
 
 #cabinet[zoom>=16] {
-    point-file: url('symbols/cabinet.20.png');
-  }
+  point-file: url('symbols/cabinet.20.png');
+}
+
 #cabinet[zoom>=12][zoom<=15]{
-    marker-fill:@cabinet;
-    marker-line-color:@cabinet;
-    marker-allow-overlap:true;
+  marker-fill:@cabinet;
+  marker-line-color:@cabinet;
+  marker-allow-overlap:true;
   [zoom<=15] {
     marker-width:5;
-    }
+  }
   [zoom<=13]{
     marker-width:2;
+  }
+}
+
+#mast[zoom>=12]{
+  marker-width: 15;
+  marker-file: url('symbols/mast-communications-18.svg');
+  [zoom>=14]{
+    marker-width: 20;
+    marker-file: url('symbols/mast-communications-18.svg');
+    text-name: "[name]";
+    text-size: 12;
+    text-fill: #444;
+    text-face-name: @sans;
+    text-wrap-width: 60;
+    text-allow-overlap: true;
+    text-dy: 10;
+  }
+}
+
+#towers[zoom>=5]{
+  [zoom>=5]{
+
+    [man_made='communications_tower']{
+      marker-width: 25;
+      marker-file: url('symbols/mast-communications-18.svg');
     }
+  }
+
+  [zoom>=10]{
+    [man_made='tower']{
+      marker-width: 20;
+      marker-file: url('symbols/mast-communications-18.svg');
+    }
+  }
+
+  [zoom>=13]{
+    [man_made='communications_tower']{
+      marker-width: 30;
+      marker-file: url('symbols/mast-communications-18.svg');
+    }
+
+    text-name: "[name]";
+    text-size: 12;
+    text-fill: #444;
+    text-face-name: @sans;
+    text-wrap-width: 60;
+    text-allow-overlap: true;
+    text-dy: 10;
+  }
 }
 
-#mast[zoom>=6]{
-  point-file: url('symbols/mast.p.20.png');
-  [zoom<=8]{
-  	point-file: url('symbols/mast.p.18.png');
-  }
-  [zoom>=13]{
-  text-name: "[name]";
-  text-size: 12;
-  text-fill: #444;
-  text-face-name: @sans;
-  text-wrap-width: 60;
-  text-allow-overlap: true;
-  text-dy: 10;
-  }
-}
 
-#tower[zoom>=5]{
-  point-file: url('symbols/communications.p.20.png');
-  [zoom<=8]{
-  	point-file: url('symbols/communications.p.18.png');
-  }
-  [zoom>=13]{
-  text-name: "[name]";
-  text-size: 12;
-  text-fill: #444;
-  text-face-name: @sans;
-  text-wrap-width: 60;
-  text-allow-overlap: true;
-  text-dy: 10;
-  }
-}
-#big_tower{
-  point-file: url('symbols/comms_tower.p.25.png');
-  [zoom<=6]{
-  	point-file: url('symbols/comms_tower.p.20.png');
-  }
-  [zoom>=13]{
-  text-name: "[name]";
-  text-size: 12;
-  text-fill: #444;
-  text-face-name: @sans;
-  text-wrap-width: 60;
-  text-allow-overlap: true;
-  text-dy: 10;
-  }
-}
 
 
 #submarine_cable {
@@ -88,7 +93,7 @@
   [zoom<=6]{line-width:1;}
   line-cap: round;
   line-dasharray: 5, 20
-  line-opacity 0.7;
+    line-opacity 0.7;
   line-color: @submarine_cable;
   [type='telephone']{ 
     line-color: @submarine_cable_tele;
@@ -110,16 +115,16 @@
   marker-fill: #A97D0E;
   marker-line-color: #A97D0E;
   [zoom<14]{
-  	marker-width:2;
+    marker-width:2;
   }
 }
 
 
 #tele_office[zoom<=13]{
-    point-allow-overlap: true;
-    point-file: url('symbols/warehouse-24.png');
-    [zoom<=7] {  
-    
+  point-allow-overlap: true;
+  point-file: url('symbols/warehouse-24.png');
+  [zoom<=7] {  
+
     point-allow-overlap: false;
     point-file: url('symbols/warehouse-18.png'); }
 }
@@ -141,15 +146,16 @@
 }
 
 #data_center[zoom<=13]{
-    point-allow-overlap: true;
-    point-file: url('symbols/warehouse-24.png');
-    [zoom<=7] { 
-    
+  point-allow-overlap: true;
+  point-file: url('symbols/warehouse-24.png');
+  [zoom<=7] { 
+
     point-allow-overlap: false;
     point-file: url('symbols/warehouse-18.png'); }
 }
+
 #data_centre[zoom>=16][zoom<=19] {
- building-fill:@data_centre;
+  building-fill:@data_centre;
   [zoom>=14] {
     line-color:darken(@data_centre,5%);
     line-width:0.5;
@@ -167,20 +173,20 @@
 
 
 #tele_exchange_points{
-    point-allow-overlap: true;
-    point-file: url('symbols/commercial-24.png');
-    [zoom<=7] {   
-    
+  point-allow-overlap: true;
+  point-file: url('symbols/commercial-24.png');
+  [zoom<=7] {   
+
     point-allow-overlap: false;
     point-file: url('symbols/commercial-18.png'); }
 }
 
 
 #tele_exchange_buildings[zoom<=11]{
-    point-allow-overlap: true;
-    point-file: url('symbols/commercial-24.png');
-    [zoom<=7] {  
-    
+  point-allow-overlap: true;
+  point-file: url('symbols/commercial-24.png');
+  [zoom<=7] {  
+
     point-allow-overlap: false;
     point-file: url('symbols/commercial-18.png'); }
 }
@@ -188,9 +194,9 @@
 #tele_exchange_buildings[zoom>=16][zoom<=19]{
   building-fill:@tele_office;
   building-height:2.25;
-    line-color:darken(@tele_office,10%);
-    line-width:0.6;
- 
+  line-color:darken(@tele_office,10%);
+  line-width:0.6;
+
 }
 
 #tele_exchange_buildings_scaled[zoom>=12][zoom<=15]{
