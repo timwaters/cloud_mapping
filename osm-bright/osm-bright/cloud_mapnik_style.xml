@@ -21,19 +21,14 @@
 </FontSet>
 <Style name="mast" filter-mode="first">
   <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <PointSymbolizer file="symbols/mast.p.20.png" />
-    <TextSymbolizer size="12" fill="#444444" fontset-name="fontset-0" wrap-width="60" allow-overlap="true" dy="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MarkersSymbolizer width="20" file="symbols/mast-communications-18.svg" />
+    <TextSymbolizer size="12" fontset-name="fontset-0" wrap-width="60" allow-overlap="true" dy="12" fill="#ffffff" halo-radius="1.5" halo-fill="#444444" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MaxScaleDenominator>12500000</MaxScaleDenominator>
-    <MinScaleDenominator>1500000</MinScaleDenominator>
-    <PointSymbolizer file="symbols/mast.p.18.png" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <PointSymbolizer file="symbols/mast.p.20.png" />
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MarkersSymbolizer width="15" file="symbols/mast-communications-18.svg" />
   </Rule>
 </Style>
 <Layer name="mast"
@@ -79,59 +74,40 @@
     </Datasource>
   </Layer>
 
-<Style name="tower" filter-mode="first">
+<Style name="towers" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <PointSymbolizer file="symbols/communications.p.20.png" />
-    <TextSymbolizer size="12" fill="#444444" fontset-name="fontset-0" wrap-width="60" allow-overlap="true" dy="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <Filter>([man_made] = 'communications_tower')</Filter>
+    <MarkersSymbolizer width="30" file="symbols/mast-communications-18.svg" />
+    <TextSymbolizer size="12" fontset-name="fontset-0" wrap-width="60" allow-overlap="true" dy="12" fill="#ffffff" halo-radius="1.5" halo-fill="#444444" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000000</MaxScaleDenominator>
-    <MinScaleDenominator>1500000</MinScaleDenominator>
-    <PointSymbolizer file="symbols/communications.p.18.png" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500000</MaxScaleDenominator>
     <MinScaleDenominator>100000</MinScaleDenominator>
-    <PointSymbolizer file="symbols/communications.p.20.png" />
+    <Filter>([man_made] = 'communications_tower')</Filter>
+    <MarkersSymbolizer width="25" file="symbols/mast-communications-18.svg" />
   </Rule>
-</Style>
-<Layer name="tower"
-  status="on"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>tower</StyleName>
-    <Datasource>
-       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
-       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
-       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
-       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
-       <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT way, name AS type, name FROM planet_osm_point WHERE  "man_made"='tower' AND "tower:type"='communication') AS data]]></Parameter>
-       <Parameter name="type"><![CDATA[postgis]]></Parameter>
-    </Datasource>
-  </Layer>
-
-<Style name="big_tower" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <PointSymbolizer file="symbols/comms_tower.p.25.png" />
-    <TextSymbolizer size="12" fill="#444444" fontset-name="fontset-0" wrap-width="60" allow-overlap="true" dy="10" ><![CDATA[[name]]]></TextSymbolizer>
+    <Filter>([man_made] = 'tower')</Filter>
+    <MarkersSymbolizer width="20" file="symbols/mast-communications-18.svg" />
+    <TextSymbolizer size="12" fontset-name="fontset-0" wrap-width="60" allow-overlap="true" dy="12" fill="#ffffff" halo-radius="1.5" halo-fill="#444444" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
-    <MinScaleDenominator>6500000</MinScaleDenominator>
-    <PointSymbolizer file="symbols/comms_tower.p.20.png" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
     <MinScaleDenominator>100000</MinScaleDenominator>
-    <PointSymbolizer file="symbols/comms_tower.p.25.png" />
+    <Filter>([man_made] = 'tower')</Filter>
+    <MarkersSymbolizer width="20" file="symbols/mast-communications-18.svg" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <TextSymbolizer size="12" fontset-name="fontset-0" wrap-width="60" allow-overlap="true" dy="12" fill="#ffffff" halo-radius="1.5" halo-fill="#444444" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
-<Layer name="big_tower"
+<Layer name="towers"
   status="on"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>big_tower</StyleName>
+    <StyleName>towers</StyleName>
     <Datasource>
        <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="host"><![CDATA[localhost]]></Parameter>
@@ -139,7 +115,7 @@
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT way, name AS type, name FROM planet_osm_point WHERE  "man_made"='communications_tower') AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, name, man_made FROM planet_osm_point WHERE  (man_made='tower' AND "tower:type"='communication') OR  man_made='communications_tower'  ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
@@ -440,7 +416,7 @@
 <Style name="building-text" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <TextSymbolizer size="14" fill="#444444" fontset-name="fontset-0" halo-radius="1.2" wrap-width="60" halo-fill="rgba(255, 255, 255, 0.5)" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
+    <TextSymbolizer size="14" fontset-name="fontset-0" fill="#ffffff" halo-radius="1.5" halo-fill="#444444" wrap-width="60" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="building-text"
