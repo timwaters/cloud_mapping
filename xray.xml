@@ -1,0 +1,385 @@
+CTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#000000" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">0,0,3</Parameter>
+  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="maxzoom">22</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="scale">1</Parameter>
+</Parameters>
+
+<Style name="mast" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(218,223,225,0.5)" />
+    <PolygonSymbolizer fill="rgba(218,223,225,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(218,223,225,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(218,223,225,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(218,223,225,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="mast" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>mast</StyleName>
+</Layer>
+<Style name="manhole" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(217,30,24,0.5)" />
+    <PolygonSymbolizer fill="rgba(217,30,24,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(217,30,24,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(217,30,24,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(217,30,24,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="manhole" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>manhole</StyleName>
+</Layer>
+<Style name="towers" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(102,51,153,0.5)" />
+    <PolygonSymbolizer fill="rgba(102,51,153,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(102,51,153,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(102,51,153,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(102,51,153,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="towers" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>towers</StyleName>
+</Layer>
+<Style name="tele_line" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(68,108,179,0.5)" />
+    <PolygonSymbolizer fill="rgba(68,108,179,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(68,108,179,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(68,108,179,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(68,108,179,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="tele_line" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_line</StyleName>
+</Layer>
+<Style name="submarine_cable" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(247,202,24,0.5)" />
+    <PolygonSymbolizer fill="rgba(247,202,24,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(247,202,24,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(247,202,24,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(247,202,24,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="submarine_cable" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>submarine_cable</StyleName>
+</Layer>
+<Style name="poles" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(38,166,91,0.5)" />
+    <PolygonSymbolizer fill="rgba(38,166,91,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(38,166,91,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(38,166,91,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(38,166,91,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="poles" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>poles</StyleName>
+</Layer>
+<Style name="cabinet" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(78,205,196,0.5)" />
+    <PolygonSymbolizer fill="rgba(78,205,196,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(78,205,196,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(78,205,196,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(78,205,196,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="cabinet" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>cabinet</StyleName>
+</Layer>
+<Style name="tele_exchange_points" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(219,10,91,0.5)" />
+    <PolygonSymbolizer fill="rgba(219,10,91,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(219,10,91,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(219,10,91,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(219,10,91,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="tele_exchange_points" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_exchange_points</StyleName>
+</Layer>
+<Style name="data_centre" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(232,126,4,0.5)" />
+    <PolygonSymbolizer fill="rgba(232,126,4,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(232,126,4,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(232,126,4,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(232,126,4,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="data_centre" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>data_centre</StyleName>
+</Layer>
+<Style name="tele_office" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(135,211,124,0.5)" />
+    <PolygonSymbolizer fill="rgba(135,211,124,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(135,211,124,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(135,211,124,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(135,211,124,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="tele_office" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_office</StyleName>
+</Layer>
+<Style name="tele_exchange_buildings" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(218,223,225,0.5)" />
+    <PolygonSymbolizer fill="rgba(218,223,225,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(218,223,225,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(218,223,225,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(218,223,225,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="tele_exchange_buildings" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_exchange_buildings</StyleName>
+</Layer>
+<Style name="tele_exchange_buildings_scaled" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(217,30,24,0.5)" />
+    <PolygonSymbolizer fill="rgba(217,30,24,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(217,30,24,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(217,30,24,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(217,30,24,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="tele_exchange_buildings_scaled" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_exchange_buildings_scaled</StyleName>
+</Layer>
+<Style name="data_centre_scaled" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(102,51,153,0.5)" />
+    <PolygonSymbolizer fill="rgba(102,51,153,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(102,51,153,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(102,51,153,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(102,51,153,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="data_centre_scaled" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>data_centre_scaled</StyleName>
+</Layer>
+<Style name="tele_office_scaled" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(68,108,179,0.5)" />
+    <PolygonSymbolizer fill="rgba(68,108,179,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(68,108,179,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(68,108,179,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(68,108,179,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="tele_office_scaled" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_office_scaled</StyleName>
+</Layer>
+<Style name="building-text" filter-mode="first" comp-op="screen">
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 3)</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(247,202,24,0.5)" />
+    <PolygonSymbolizer fill="rgba(247,202,24,0.05)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="rgba(247,202,24,0.5)" />
+  </Rule>
+  <Rule>
+    <Filter>([mapnik::geometry_type] = 1)</Filter>
+    <MarkersSymbolizer allow-overlap="true" width="4" height="4" stroke-width="0" stroke="#ffffff" fill="rgba(247,202,24,0.5)" />
+    <TextSymbolizer allow-overlap="true" justify-alignment="left" face-name="DejaVu Sans Book" fill="rgba(247,202,24,0.75)" size="12" dy="6" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <ElseFilter></ElseFilter>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+
+<Layer name="building-text" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>building-text</StyleName>
+</Layer>
+
+
+<Style name="_image" filter-mode="first">
+  <Rule>
+    <RasterSymbolizer opacity="1" />
+  </Rule>
+</Style>
+<Layer name="_image" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+  <StyleName>_image</StyleName>
+</Layer>
+
+</Map>
+
