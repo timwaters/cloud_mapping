@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#000000" font-directory="./fonts">
+
+<Parameters>
+  <Parameter name="bounds">-3.5547,52.7709,0.3345,54.3306</Parameter>
+  <Parameter name="center">-1.6211,53.5612,7</Parameter>
+  <Parameter name="format">png8</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="maxzoom">17</Parameter>
+  <Parameter name="scale">1</Parameter>
+  <Parameter name="metatile">2</Parameter>
+  <Parameter name="attribution"><![CDATA[Data © OpenStreetMap (and) contributors, CC-BY-SA]]></Parameter>
+  <Parameter name="name"><![CDATA[OSM Bright]]></Parameter>
+</Parameters>
+
+<FontSet name="fontset-0">
+  <Font face-name="Open Sans Semibold"/>
+  <Font face-name="DejaVu Sans Book"/>
+  <Font face-name="unifont Medium"/>
+</FontSet>
+<Style name="mast" filter-mode="first">
+  <Rule>
+    <MarkersSymbolizer width="4" stroke-width="0" allow-overlap="true" fill="rgba(218, 223, 225, 0.5)" />
+    <TextSymbolizer size="12" fontset-name="fontset-0" wrap-width="60" allow-overlap="true" dy="6" fill="rgba(218, 223, 225, 0.75)" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="mast"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>mast</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, name AS type, name FROM planet_osm_point WHERE  ("man_made"='mast' AND ("mast:type"='communication' OR "tower:type"='communication')) OR telecom='antenna') AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="manhole" filter-mode="first">
+  <Rule>
+    <MarkersSymbolizer width="4" stroke-width="0" allow-overlap="true" fill="rgba(217, 30, 24, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="manhole"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>manhole</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, name AS type, name FROM planet_osm_point WHERE  manhole is not null) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="towers" filter-mode="first">
+  <Rule>
+    <MarkersSymbolizer width="4" stroke-width="0" allow-overlap="true" fill="rgba(102, 51, 153, 0.5)" />
+    <TextSymbolizer size="12" fontset-name="fontset-0" wrap-width="60" allow-overlap="true" dy="6" fill="rgba(102, 51, 153, 0.75)" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="towers"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>towers</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, name, man_made FROM planet_osm_point WHERE  (man_made='tower' AND "tower:type"='communication') OR  man_made='communications_tower'  ) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tele_line" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="rgba(68, 108, 179, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="tele_line"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_line</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, communication AS type  FROM planet_osm_line  WHERE ((communication='line' OR telephone='line' OR phone='line' OR aerial_line='telephone') AND (submarine IS NULL OR submarine IN ( '', 'no', '0', 'false')))) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="submarine_cable" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="1" stroke="rgba(247, 202, 24, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="submarine_cable"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>submarine_cable</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, "seamark:cable_submarine:category" AS type  FROM planet_osm_line  WHERE "seamark:cable_submarine:category" IN ('telephone','fibre_optic') OR ("communication"='line' AND "submarine"='yes') ) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="poles" filter-mode="first">
+  <Rule>
+    <MarkersSymbolizer width="4" stroke-width="0" allow-overlap="true" fill="rgba(38, 166, 91, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="poles"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>poles</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, communication AS type  FROM planet_osm_point  WHERE phone='pole' OR telephone='pole' OR communication='pole' OR utility='pole' ) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="cabinet" filter-mode="first">
+  <Rule>
+    <MarkersSymbolizer width="4" stroke-width="0" allow-overlap="true" fill="rgba(78, 205, 196, 0.5)" />
+  </Rule>
+</Style>
+<Layer name="cabinet"
+  status="on"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>cabinet</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, cabinet AS type, name FROM planet_osm_point WHERE cabinet IS NOT NULL OR street_cabinet IS NOT NULL OR "utility"='cabinet' OR "man_made"='street_cabinet' or "telecommunications"='cabinet' OR ("communication"='outdoor_dslam' OR "communication"='cable_distribution_cabinet' or telecom='remote_terminal')) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Layer name="tele_exchannge_points"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, building AS type  FROM planet_osm_point  WHERE man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office' OR building='telephone_exchange') AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="data_centre" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(135, 211, 124, 0.5)" />
+    <PolygonSymbolizer fill="rgba(135, 211, 124, 0.05)" />
+  </Rule>
+</Style>
+<Layer name="data_centre"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>data_centre</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, building AS type  FROM planet_osm_polygon  WHERE building NOT IN ('0','false', 'no') AND (building='data_center' OR building='data_centre' OR name LIKE '%Data Centre%' OR name LIKE '%Data Center%') ORDER BY ST_YMin(ST_Envelope(way)) DESC) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tele_office" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(218, 223, 225, 0.5)" />
+    <PolygonSymbolizer fill="rgba(218, 223, 225, 0.05)" />
+  </Rule>
+</Style>
+<Layer name="tele_office"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_office</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, building AS type  FROM planet_osm_polygon  WHERE building NOT IN ('0','false', 'no') AND office LIKE 'tele%' ORDER BY ST_YMin(ST_Envelope(way)) DESC) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tele_exchange_buildings" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(217, 30, 24, 0.5)" />
+    <PolygonSymbolizer fill="rgba(217, 30, 24, 0.05)" />
+  </Rule>
+</Style>
+<Layer name="tele_exchange_buildings"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_exchange_buildings</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office') OR building='telephone_exchange') ORDER BY ST_YMin(ST_Envelope(way)) DESC) AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tele_exchange_buildings_scaled" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(102, 51, 153, 0.5)" />
+    <PolygonSymbolizer fill="rgba(102, 51, 153, 0.05)" />
+  </Rule>
+</Style>
+<Layer name="tele_exchange_buildings_scaled"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_exchange_buildings_scaled</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( select st_translate(st_scale(way,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!))  ,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) ), st_x(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )), st_y(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )))  as way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office') OR building='telephone_exchange'))  AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="data_centre_scaled" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(68, 108, 179, 0.5)" />
+    <PolygonSymbolizer fill="rgba(68, 108, 179, 0.05)" />
+  </Rule>
+</Style>
+<Layer name="data_centre_scaled"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>data_centre_scaled</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( select st_translate(st_scale(way,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!))  ,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) ), st_x(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )), st_y(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )))  as way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (building='data_center' OR building='data_centre' OR name LIKE '%Data Centre%' OR name LIKE '%Data Center%')  ))  AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="tele_office_scaled" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(247, 202, 24, 0.5)" />
+    <PolygonSymbolizer fill="rgba(247, 202, 24, 0.05)" />
+  </Rule>
+</Style>
+<Layer name="tele_office_scaled"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>tele_office_scaled</StyleName>
+    <Datasource>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="table"><![CDATA[( select st_translate(st_scale(way,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!))  ,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) ), st_x(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )), st_y(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )))  as way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (office LIKE 'tele%' )  ))  AS data]]></Parameter>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="building-text" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke-width="0.5" stroke="rgba(247, 202, 24, 0.5)" />
+    <PolygonSymbolizer fill="rgba(247, 202, 24, 0.05)" />
+  </Rule>
+</Style>
+<Layer name="building-text"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>building-text</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[(select name, way, way_area from planet_osm_polygon where building is not null AND (building IN ('telephone_exchange','data_center','data_centre') OR office LIKE 'tele%' OR man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office')) as building_text]]></Parameter>
+       <Parameter name="extent"><![CDATA[-20037508,-19929239,20037508,19929239]]></Parameter>
+       <Parameter name="key_field"><![CDATA[]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
+       <Parameter name="dbname"><![CDATA[gis]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[gisuser]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
