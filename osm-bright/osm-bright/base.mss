@@ -5,6 +5,7 @@
  * - Cables 
  * - Buildings
  *
+ * Colours and font sets are in palette.mss
  */
 
 
@@ -45,11 +46,14 @@
     marker-file: url('symbols/mast-communications-18.svg');
     text-name: "[name]";
     text-size: 12;
-    text-fill: #444;
     text-face-name: @sans;
     text-wrap-width: 60;
     text-allow-overlap: true;
-    text-dy: 10;
+    text-dy: 12;
+
+    text-fill: #FFFFFF;
+    text-halo-radius: 1.5;
+    text-halo-fill: #444;
   }
 }
 
@@ -77,11 +81,14 @@
 
     text-name: "[name]";
     text-size: 12;
-    text-fill: #444;
     text-face-name: @sans;
     text-wrap-width: 60;
     text-allow-overlap: true;
-    text-dy: 10;
+    text-dy: 12;
+
+    text-fill: #FFFFFF;
+    text-halo-radius: 1.5;
+    text-halo-fill: #444;
   }
 }
 
@@ -192,13 +199,28 @@
 }
 
 #tele_exchange_buildings[zoom>=16][zoom<=19]{
-  building-fill:@tele_office;
-  building-height:2.25;
-  line-color:darken(@tele_office,10%);
-  line-width:0.6;
+  building-fill: @tele_office;
+  building-height: 2.25;
+  line-color: darken(@tele_office,10%);
+  line-width: 0.6;
 
 }
 
 #tele_exchange_buildings_scaled[zoom>=12][zoom<=15]{
-  building-fill:@tele_office;
+  building-fill: @tele_office;
+}
+
+
+
+#building-text {
+  [zoom >= 12] {
+    text-name: "[name]";
+    text-size: 14;
+    text-face-name: @sans;
+    text-fill: #FFFFFF;
+    text-halo-radius: 1.5;
+    text-halo-fill: #444;
+    text-wrap-width: 60;
+    text-placement: interior;
+  }
 }
