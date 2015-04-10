@@ -42,7 +42,7 @@
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT way, name AS type, name FROM planet_osm_point WHERE  ("man_made"='mast' AND ("mast:type"='communication' OR "tower:type"='communication')) OR telecom='antenna') AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, operator, name AS type, name FROM planet_osm_point WHERE  ("man_made"='mast' AND ("mast:type"='communication' OR "tower:type"='communication')) OR telecom='antenna') AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
@@ -115,7 +115,7 @@
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT way, name, man_made FROM planet_osm_point WHERE  (man_made='tower' AND "tower:type"='communication') OR  man_made='communications_tower'  ) AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, operator, name, man_made FROM planet_osm_point WHERE  (man_made='tower' AND "tower:type"='communication') OR  man_made='communications_tower'  ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
@@ -181,7 +181,7 @@
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT way, "seamark:cable_submarine:category" AS type  FROM planet_osm_line  WHERE "seamark:cable_submarine:category" IN ('telephone','fibre_optic') OR ("communication"='line' AND "submarine"='yes') ) AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, operator, COALESCE(name, "seamark:cable_submarine:name") AS name, "seamark:cable_submarine:category" AS type  FROM planet_osm_line  WHERE "seamark:cable_submarine:category" IN ('telephone','fibre_optic') OR ("communication"='line' AND "submarine"='yes') ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
@@ -264,7 +264,7 @@
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT way, building AS type  FROM planet_osm_point  WHERE man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office' OR building='telephone_exchange') AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, name, operator, building AS type  FROM planet_osm_point  WHERE man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office' OR building='telephone_exchange') AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
@@ -287,7 +287,7 @@
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT way, building AS type  FROM planet_osm_polygon  WHERE building NOT IN ('0','false', 'no') AND (building='data_center' OR building='data_centre' OR name LIKE '%Data Centre%' OR name LIKE '%Data Center%') ORDER BY ST_YMin(ST_Envelope(way)) DESC) AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, name, operator, building AS type  FROM planet_osm_polygon  WHERE building NOT IN ('0','false', 'no') AND (building='data_center' OR building='data_centre' OR name LIKE '%Data Centre%' OR name LIKE '%Data Center%') ORDER BY ST_YMin(ST_Envelope(way)) DESC) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
@@ -319,7 +319,7 @@
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT way, building AS type  FROM planet_osm_polygon  WHERE building NOT IN ('0','false', 'no') AND office LIKE 'tele%' ORDER BY ST_YMin(ST_Envelope(way)) DESC) AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, name, operator, building AS type  FROM planet_osm_polygon  WHERE building NOT IN ('0','false', 'no') AND office LIKE 'tele%' ORDER BY ST_YMin(ST_Envelope(way)) DESC) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
@@ -351,7 +351,7 @@
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( SELECT way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office') OR building='telephone_exchange') ORDER BY ST_YMin(ST_Envelope(way)) DESC) AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( SELECT way, name, operator, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office') OR building='telephone_exchange') ORDER BY ST_YMin(ST_Envelope(way)) DESC) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
@@ -374,7 +374,7 @@
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( select st_translate(st_scale(way,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!))  ,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) ), st_x(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )), st_y(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )))  as way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office') OR building='telephone_exchange'))  AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( select st_translate(st_scale(way,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!))  ,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) ), st_x(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )), st_y(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )))  as way, building AS type, name, operator  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office') OR building='telephone_exchange'))  AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
@@ -396,7 +396,7 @@
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( select st_translate(st_scale(way,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!))  ,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) ), st_x(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )), st_y(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )))  as way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (building='data_center' OR building='data_centre' OR name LIKE '%Data Centre%' OR name LIKE '%Data Center%')  ))  AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( select st_translate(st_scale(way,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!))  ,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) ), st_x(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )), st_y(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )))  as way, building AS type, name, operator  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (building='data_center' OR building='data_centre' OR name LIKE '%Data Centre%' OR name LIKE '%Data Center%')  ))  AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
@@ -418,7 +418,7 @@
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
-       <Parameter name="table"><![CDATA[( select st_translate(st_scale(way,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!))  ,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) ), st_x(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )), st_y(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )))  as way, building AS type  FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (office LIKE 'tele%' )  ))  AS data]]></Parameter>
+       <Parameter name="table"><![CDATA[( select st_translate(st_scale(way,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!))  ,  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) ), st_x(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )), st_y(st_centroid(way))*(1-(  (!scale_denominator! * 0.00028) - (5 - z(!scale_denominator!)) )))  as way, building AS type, name, operator FROM planet_osm_polygon  WHERE (building NOT IN ('0','false', 'no') AND (office LIKE 'tele%' )  ))  AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
     </Datasource>
   </Layer>
@@ -434,7 +434,7 @@
     <StyleName>building-text</StyleName>
     <Datasource>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
-       <Parameter name="table"><![CDATA[(select name, way, way_area from planet_osm_polygon where building is not null AND (building IN ('telephone_exchange','data_center','data_centre') OR office LIKE 'tele%' OR man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office')) as building_text]]></Parameter>
+       <Parameter name="table"><![CDATA[(select name, operator, way, way_area from planet_osm_polygon where building is not null AND (building IN ('telephone_exchange','data_center','data_centre') OR office LIKE 'tele%' OR man_made='telephone_exchange' OR man_made='telephone_office' OR telecom='central_office')) as building_text]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508,-19929239,20037508,19929239]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="geometry_field"><![CDATA[way]]></Parameter>

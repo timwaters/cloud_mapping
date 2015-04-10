@@ -1,0 +1,15 @@
+ mast, 
+ manhole,
+2 towers, *
+ tele_line,
+4 submarine_cable, *
+ poles, 
+ cabinet,
+7 tele_exchange_points, *
+8 data_centre, *
+9 tele_office,  *
+10 tele_exchange_buildings, *
+11 tele_exchange_buildings_scaled, *
+12 data_centre_scaled, *
+13 tele_office_scaled,  *
+building-text 

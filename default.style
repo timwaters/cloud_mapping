@@ -41,6 +41,7 @@ node,way   telecommunications   text linear
 node,way   communication       text  linear
 
 way        seamark:cable_submarine:category   text   linear
+way        seamark:cable_submarine:name text   linear
 node,way   submarine     text        linear
 node,way   telecom       text        linear
 node,way   telephone     text        linear
