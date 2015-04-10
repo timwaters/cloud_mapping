@@ -81,9 +81,6 @@ Map {
   marker-allow-overlap:true;
   marker-fill: rgba(78,205,196,0.5);
 
-
-
-
 }
 
 #tele_exchange_points {
@@ -91,17 +88,6 @@ Map {
   marker-line-width: 0;
   marker-allow-overlap:true;
   marker-fill: rgba(219,10,91,0.5);
-
-  text-name: "[name]";
-  text-size: 12;
-  text-face-name: @sans;
-  text-wrap-width: 60;
-  text-allow-overlap: true;
-  text-dy: 6;
-  text-fill: rgba(219,10,91,0.75);
-
-
-
 }
 
 #data_centre {

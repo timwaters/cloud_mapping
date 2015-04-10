@@ -244,9 +244,19 @@
     </Datasource>
   </Layer>
 
-<Layer name="tele_exchannge_points"
+<Style name="tele_exchange_points" filter-mode="first">
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <PointSymbolizer allow-overlap="false" file="symbols/commercial-18.png" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <PointSymbolizer allow-overlap="true" file="symbols/commercial-24.png" />
+  </Rule>
+</Style>
+<Layer name="tele_exchange_points"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    
+    <StyleName>tele_exchange_points</StyleName>
     <Datasource>
        <Parameter name="dbname"><![CDATA[gis]]></Parameter>
        <Parameter name="host"><![CDATA[localhost]]></Parameter>
