@@ -13,3 +13,9 @@
 12 data_centre_scaled, *
 13 tele_office_scaled,  *
 building-text 
+
+
+./osmconvert  planet-latest.osm.pbf -o=planet.o5m
+./osmfilter planet.o5m --parameter-file=cloud_mapping/osmfilter_params.txt > planet.filtered.osm
+
+ osm2pgsql --slim -d gis planet.filtered.osm -S cloud_mapping/default.style
