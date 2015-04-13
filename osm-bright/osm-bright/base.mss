@@ -152,7 +152,7 @@
   building-fill:@tele_office;
 }
 
-#data_center[zoom<=13]{
+#data_centre[zoom<=13]{
   point-allow-overlap: true;
   point-file: url('symbols/warehouse-24.png');
   [zoom<=7] { 
