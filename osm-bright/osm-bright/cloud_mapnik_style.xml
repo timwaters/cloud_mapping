@@ -276,6 +276,17 @@
     <BuildingSymbolizer height="1.25" fill="#4d0049" />
     <LineSymbolizer stroke="#1a0019" stroke-width="0.6" />
   </Rule>
+  <Rule>
+    <MinScaleDenominator>3000000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#4d0049" fill-opacity="0.1" />
+    <PointSymbolizer allow-overlap="false" file="symbols/warehouse-18.png" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#4d0049" fill-opacity="0.1" />
+    <PointSymbolizer allow-overlap="true" file="symbols/warehouse-24.png" />
+  </Rule>
 </Style>
 <Layer name="data_centre"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
@@ -296,16 +307,18 @@
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>750</MinScaleDenominator>
-    <BuildingSymbolizer height="1.25" fill="#064407" />
-    <LineSymbolizer stroke="#021502" stroke-width="0.6" />
+    <BuildingSymbolizer height="1.25" fill="#4d0049" />
+    <LineSymbolizer stroke="#1a0019" stroke-width="0.6" />
   </Rule>
   <Rule>
     <MinScaleDenominator>3000000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#4d0049" fill-opacity="0.1" />
     <PointSymbolizer allow-overlap="false" file="symbols/warehouse-18.png" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#4d0049" fill-opacity="0.1" />
     <PointSymbolizer allow-overlap="true" file="symbols/warehouse-24.png" />
   </Rule>
 </Style>
@@ -333,11 +346,13 @@
   </Rule>
   <Rule>
     <MinScaleDenominator>3000000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#064407" fill-opacity="0.1" />
     <PointSymbolizer allow-overlap="false" file="symbols/commercial-18.png" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#064407" fill-opacity="0.1" />
     <PointSymbolizer allow-overlap="true" file="symbols/commercial-24.png" />
   </Rule>
 </Style>
@@ -361,6 +376,7 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <BuildingSymbolizer fill="#064407" />
+    <LineSymbolizer stroke-width="1" stroke="#000000" />
   </Rule>
 </Style>
 <Layer name="tele_exchange_buildings_scaled"
@@ -384,6 +400,7 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <BuildingSymbolizer fill="#4d0049" />
+    <LineSymbolizer stroke-width="1" stroke="#000000" />
   </Rule>
 </Style>
 <Layer name="data_centre_scaled"
@@ -405,7 +422,8 @@
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <BuildingSymbolizer fill="#064407" />
+    <BuildingSymbolizer fill="#4d0049" />
+    <LineSymbolizer stroke-width="1" stroke="#000000" />
   </Rule>
 </Style>
 <Layer name="tele_office_scaled"

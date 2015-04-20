@@ -128,6 +128,8 @@
 
 
 #tele_office[zoom<=13]{
+  polygon-fill:@tele_office;
+  polygon-opacity: 0.1;
   point-allow-overlap: true;
   point-file: url('symbols/warehouse-24.png');
   [zoom<=7] {  
@@ -155,6 +157,8 @@
 }
 
 #data_centre[zoom<=13]{
+  polygon-fill: @data_centre;
+  polygon-opacity: 0.1;
   point-allow-overlap: true;
   point-file: url('symbols/warehouse-24.png');
   [zoom<=7] { 
@@ -194,6 +198,8 @@
 
 
 #tele_exchange_buildings[zoom<=11]{
+  polygon-fill: @tele_exchange;
+  polygon-opacity: 0.1;
   point-allow-overlap: true;
   point-file: url('symbols/commercial-24.png');
   [zoom<=7] {  
