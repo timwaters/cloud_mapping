@@ -150,6 +150,8 @@
 
 #tele_office_scaled[zoom>=12][zoom<=15]{
   building-fill:@tele_office;
+  line-width: 1;
+  line-color:darken(@tele_office, 20%);
 }
 
 #data_centre[zoom<=13]{
@@ -176,6 +178,8 @@
 
 #data_centre_scaled[zoom>=12][zoom<=15]{
   building-fill:@data_centre;
+  line-width: 1;
+  line-color:darken(@data_centre, 20%);
 }
 
 
@@ -199,15 +203,17 @@
 }
 
 #tele_exchange_buildings[zoom>=16][zoom<=19]{
-  building-fill: @tele_office;
+  building-fill: @tele_exchange;
   building-height: 2.25;
-  line-color: darken(@tele_office,10%);
+  line-color: darken(@tele_exchange,10%);
   line-width: 0.6;
 
 }
 
 #tele_exchange_buildings_scaled[zoom>=12][zoom<=15]{
-  building-fill: @tele_office;
+  building-fill: @tele_exchange;
+  line-width: 1;
+  line-color:darken(@tele_exchange, 20%);
 }
 
 
