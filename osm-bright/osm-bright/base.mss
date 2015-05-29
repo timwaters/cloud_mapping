@@ -222,7 +222,18 @@
   line-color:darken(@tele_exchange, 20%);
 }
 
-
+#building-text-normal {
+  [zoom >= 16] {
+    text-name: "[name]";
+    text-size: 14;
+    text-face-name: @sans;
+    text-fill: #FFFFFF;
+    text-halo-radius: 1.5;
+    text-halo-fill: #444;
+    text-wrap-width: 60;
+    text-placement: interior;
+  }
+}
 
 #building-text {
   [zoom >= 12] {
