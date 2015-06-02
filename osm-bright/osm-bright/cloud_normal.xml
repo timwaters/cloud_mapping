@@ -271,7 +271,7 @@
 
 <Style name="data_centre" filter-mode="first">
   <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>750</MinScaleDenominator>
     <BuildingSymbolizer height="1.25" fill="#4d0049" />
     <LineSymbolizer stroke="#1a0019" stroke-width="0.6" />
@@ -283,7 +283,7 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
-    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
     <PolygonSymbolizer fill="#4d0049" fill-opacity="0.1" />
     <PointSymbolizer allow-overlap="true" file="symbols/warehouse-24.png" />
   </Rule>
@@ -305,7 +305,7 @@
 
 <Style name="tele_office" filter-mode="first">
   <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>750</MinScaleDenominator>
     <BuildingSymbolizer height="1.25" fill="#4d0049" />
     <LineSymbolizer stroke="#1a0019" stroke-width="0.6" />
@@ -317,7 +317,7 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
-    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
     <PolygonSymbolizer fill="#4d0049" fill-opacity="0.1" />
     <PointSymbolizer allow-overlap="true" file="symbols/warehouse-24.png" />
   </Rule>
@@ -339,7 +339,7 @@
 
 <Style name="tele_exchange_buildings" filter-mode="first">
   <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>750</MinScaleDenominator>
     <BuildingSymbolizer fill="#064407" height="2.25" />
     <LineSymbolizer stroke="#021502" stroke-width="0.6" />
@@ -351,7 +351,7 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
-    <MinScaleDenominator>200000</MinScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
     <PolygonSymbolizer fill="#064407" fill-opacity="0.1" />
     <PointSymbolizer allow-overlap="true" file="symbols/commercial-24.png" />
   </Rule>
@@ -373,7 +373,7 @@
 
 <Style name="building-text-normal" filter-mode="first">
   <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
     <TextSymbolizer size="14" fontset-name="fontset-0" fill="#ffffff" halo-radius="1.5" halo-fill="#444444" wrap-width="60" placement="interior" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
