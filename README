@@ -58,5 +58,5 @@ import the .osm file into the database using the custom osm2pgsql Style
 
  tilestache-clean.py --config=tilestache.cfg --tile-list=expire_e10-10.list --layer=ALL
 
-
+ BUT metatiles that are affected won't be deleted. We need to calculate these I think, or patch osm2pgsql to give the full list.
 
