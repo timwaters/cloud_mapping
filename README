@@ -1,0 +1,62 @@
+Cloud Mapping - New Cloud Atlas
+
+OSM tile rendering.
+
+Changing style in Kosmtik
+
+node index.js serve ../cloud_mapping/osm-bright/osm-bright/project.mml
+
+Export as mapnik xml for use with the tilestashe
+and commit the xml file
+
+Running tilestache locally
+
+./scripts/tilestache-server.py  -c tilestache.cfg`
+
+Viewing it in a browser
+
+http://localhost:8080/cloud/#6/54.144/-4.373
+
+Import planet
+
+Convert an osm.pbf file to an o5m file
+
+./osmconvert  planet-latest.osm.pbf -o=planet.o5m
+
+filter the o5m file to an .osm file
+
+./osmfilter planet.o5m --parameter-file=cloud_mapping/osmfilter_params.txt > planet.filtered.osm
+
+
+import the .osm file into the database using the custom osm2pgsql Style
+
+ osm2pgsql --slim -d gis planet.filtered.osm -S cloud_mapping/default.style
+
+
+ Replication then
+
+ ensure planet is updated
+
+ get changes from osmosis
+
+ osmosis --read-replication-interval-init
+
+ change url in configuration.txt 
+ get state.text and put it in the data dir
+ 
+ vim state.txt
+ 
+ 1616  osmosis --read-replication-interval  --simplify-change --write-xml-change changes.osc.gz
+
+ import changes.osc.gz using osm2pgsql
+ 
+ osm2pgsql -d gis -S default.style -s -C 800 -a changes.osc.gz -e10-19 -o expire_e10-19.list
+
+ where e10-19 is the zoom levels
+
+ use tilestashe clean script to delete the tiles
+
+ tilestache-clean.py --config=tilestache.cfg --tile-list=expire_e10-10.list --layer=ALL
+
+
+
