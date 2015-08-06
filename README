@@ -56,10 +56,12 @@ import the .osm file into the database using the custom osm2pgsql Style
  
  Then process list to get ALL the tiles
  
- ruby expand_expire_list expire_e10-19.list > expanded_expire_list.list
+ ruby expand_expire_list.rb expire_e10-19.list > expanded_expire_list.list
 
  use tilestache clean script to delete the tiles
 
  tilestache-clean.py --config=tilestache.cfg --tile-list=expanded_expire_list.list --layer=ALL
+ 
+ 
 
 
