@@ -46,17 +46,20 @@ import the .osm file into the database using the custom osm2pgsql Style
  
  vim state.txt
  
- 1616  osmosis --read-replication-interval  --simplify-change --write-xml-change changes.osc.gz
+ osmosis --read-replication-interval  --simplify-change --write-xml-change changes.osc.gz
 
  import changes.osc.gz using osm2pgsql
  
  osm2pgsql -d gis -S default.style -s -C 800 -a changes.osc.gz -e10-19 -o expire_e10-19.list
 
  where e10-19 is the zoom levels
+ 
+ Then process list to get ALL the tiles
+ 
+ ruby expand_expire_list expire_e10-19.list > expanded_expire_list.list
 
- use tilestashe clean script to delete the tiles
+ use tilestache clean script to delete the tiles
 
- tilestache-clean.py --config=tilestache.cfg --tile-list=expire_e10-10.list --layer=ALL
+ tilestache-clean.py --config=tilestache.cfg --tile-list=expanded_expire_list.list --layer=ALL
 
- BUT metatiles that are affected won't be deleted. We need to calculate these I think, or patch osm2pgsql to give the full list.
 
