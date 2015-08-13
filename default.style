@@ -50,29 +50,29 @@ node,way   aerial_line   text        linear
 
 node,way   manhole       text        linear
 
-node,way   access       text         linear
-node,way   addr:housename      text  linear
-node,way   addr:housenumber    text  linear
-node,way   addr:interpolation  text  linear 
+#node,way   access       text         linear
+#node,way   addr:housename      text  linear
+#node,way   addr:housenumber    text  linear
+#node,way   addr:interpolation  text  linear 
 node,way   amenity      text         nocache,polygon
 node,way   area         text         # hard coded support for area=1/yes => polygon is in osm2pgsql
 node,way   building     text         polygon
-node,way   disused      text         linear
-node       ele          text         linear
+#node,way   disused      text         linear
+#node       ele          text         linear
 node,way   generator:source    text  linear
-node,way   landuse      text         polygon
-node,way   layer        text         linear
+#node,way   landuse      text         polygon
+#node,way   layer        text         linear
 node,way   man_made     text         polygon
 node,way   name         text         linear
 node,way   office       text         polygon
 node,way   operator     text         linear
-node,way   place        text         polygon
-node       poi          text
-node,way   power        text         polygon
-node,way   power_source text         linear
+#node,way   place        text         polygon
+#node       poi          text
+#node,way   power        text         polygon
+#node,way   power_source text         linear
 node,way   ref          text         linear
-node,way   tunnel       text         linear
-node,way   width        text         linear
+#node,way   tunnel       text         linear
+#node,way   width        text         linear
 node,way   z_order      int4         linear # This is calculated during import
 way        way_area     real                # This is calculated during import
 
